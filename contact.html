@@ -1,0 +1,272 @@
+<!-- Updated Contact Us Page based on your index.html -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gyaankendra - Contact Us</title>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&display=swap" rel="stylesheet" />
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Outfit', sans-serif;
+      background: #f4f8fb;
+      color: #222;
+    }
+
+    header {
+      background-color: #ffffff;
+      padding: 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      flex-wrap: wrap;
+    }
+
+    .brand {
+      font-size: 2rem;
+      font-weight: 700;
+      color: #20a4f3;
+    }
+
+    .menu-toggle {
+      display: none;
+      font-size: 1.5rem;
+      background: none;
+      border: none;
+      cursor: pointer;
+    }
+
+    nav {
+      flex: 1;
+      text-align: right;
+    }
+
+    nav ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      gap: 20px;
+      justify-content: flex-end;
+      flex-wrap: wrap;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: #333;
+      font-weight: 600;
+      padding: 6px 12px;
+      display: inline-block;
+      border-radius: 6px;
+      transition: all 0.3s ease;
+    }
+
+    nav ul li:hover > a {
+      background-color: #00b2e7;
+      color: #fff;
+    }
+
+    .hero {
+      text-align: center;
+      padding: 40px 10px 20px;
+    }
+
+    .hero h1 {
+      font-size: 2rem;
+      font-weight: 700;
+      margin-bottom: 0;
+      color: #003366;
+      display: inline;
+      margin-right: 10px;
+    }
+
+    #typewriter {
+      font-weight: bold;
+      font-size: 1.3rem;
+      color: deeppink;
+      display: inline;
+      border-right: 2px solid deeppink;
+      white-space: nowrap;
+      overflow: hidden;
+    }
+
+    .news-ticker {
+      background: #31525b;
+      color: #fff;
+      padding: 10px 20px;
+      font-weight: bold;
+      white-space: nowrap;
+      overflow: hidden;
+    }
+
+    .news-ticker span {
+      display: inline-block;
+      padding-left: 100%;
+      animation: ticker 20s linear infinite;
+    }
+
+    @keyframes ticker {
+      0% {
+        transform: translateX(0);
+      }
+      100% {
+        transform: translateX(-100%);
+      }
+    }
+
+    .contact-section {
+      background: #fff;
+      padding: 60px 20px;
+      max-width: 900px;
+      margin: 40px auto;
+      border-radius: 16px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+
+    .contact-section h2 {
+      text-align: center;
+      font-size: 2.2rem;
+      color: #003366;
+      margin-bottom: 40px;
+    }
+
+    .contact-form {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+      width: 100%;
+      padding: 12px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 1rem;
+      font-family: 'Outfit', sans-serif;
+    }
+
+    .contact-form textarea {
+      grid-column: span 2;
+      height: 120px;
+      resize: vertical;
+    }
+
+    .contact-form button {
+      grid-column: span 2;
+      padding: 14px;
+      background-color: #20a4f3;
+      border: none;
+      color: #fff;
+      font-size: 1rem;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    .contact-form button:hover {
+      background-color: #0f8cd1;
+    }
+
+    .contact-info {
+      text-align: center;
+      margin-top: 30px;
+      color: #444;
+    }
+
+    footer {
+      text-align: center;
+      padding: 40px 20px;
+      background: #f1f1f1;
+      color: #333;
+    }
+
+    @media (max-width: 768px) {
+      .contact-form {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="brand">Gyaankendra</div>
+    <button class="menu-toggle" onclick="document.querySelector('nav ul').classList.toggle('active')">?</button>
+    <nav>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About Us</a></li>
+        <li><a href="#">Universities</a></li>
+        <li><a href="#">Student</a></li>
+        <li><a href="#">Contact Us</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="hero">
+    <h1>Knowledge Hub</h1>
+    <div id="typewriter"></div>
+  </div>
+
+  <div class="news-ticker">
+    <span>?? Admissions now open for 2025 | Apply before the deadline | Visit Gyaankendra for latest updates!</span>
+  </div>
+
+  <section class="contact-section">
+    <h2>Get in Touch With Us</h2>
+    <form class="contact-form">
+      <input type="text" placeholder="Your Name" required />
+      <input type="email" placeholder="Your Email" required />
+      <input type="tel" placeholder="Your Phone Number" required />
+      <input type="text" placeholder="Subject" required />
+      <textarea placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+    <div class="contact-info">
+      <p><strong>Email:</strong> support@gyaankendra.in</p>
+      <p><strong>Phone:</strong> +91 9876543210</p>
+      <p><strong>Address:</strong> 2nd Floor, Gyaankendra Building, Jaipur, Rajasthan</p>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Gyaankendra. All rights reserved.</p>
+  </footer>
+
+  <script>
+    const words = ["Shekhawati University", "Rajasthan University", "Matsya University", "Admit Card", "Result", "Admission Form"];
+    let i = 0, j = 0, isDeleting = false;
+
+    function type() {
+      const current = words[i];
+      let display = current.substring(0, j);
+      document.getElementById("typewriter").textContent = display;
+
+      if (!isDeleting && j < current.length) {
+        j++;
+        setTimeout(type, 100);
+      } else if (isDeleting && j > 0) {
+        j--;
+        setTimeout(type, 50);
+      } else {
+        isDeleting = !isDeleting;
+        if (!isDeleting) i = (i + 1) % words.length;
+        setTimeout(type, 1000);
+      }
+    }
+    type();
+  </script>
+</body>
+
+</html>

@@ -1,112 +1,122 @@
-<!-- Updated Contact Us Page based on your index.html -->
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Gyaankendra - Contact Us</title>
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&display=swap" rel="stylesheet" />
   <style>
-    * {
-      box-sizing: border-box;
-    }
-
-    body {
-      margin: 0;
-      font-family: 'Outfit', sans-serif;
-      background: #f4f8fb;
-      color: #222;
-    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'Outfit', sans-serif; background: #f4f8fb; color: #222; }
 
     header {
-      background-color: #ffffff;
-      padding: 20px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      background: #fff; padding: 10px 20px;
+      display: flex; align-items: center; justify-content: space-between;
+      position: sticky; top: 0; z-index: 1000;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
       flex-wrap: wrap;
     }
 
-    .brand {
-      font-size: 2rem;
-      font-weight: 700;
-      color: #20a4f3;
-    }
+    .brand { font-size: 1.8rem; font-weight: 700; color: #20a4f3; }
 
     .menu-toggle {
-      display: none;
-      font-size: 1.5rem;
-      background: none;
-      border: none;
-      cursor: pointer;
-    }
-
-    nav {
-      flex: 1;
-      text-align: right;
+      font-size: 1.8rem; background: none; border: none;
+      display: none; cursor: pointer;
     }
 
     nav ul {
-      list-style: none;
-      margin: 0;
-      padding: 0;
-      display: flex;
-      gap: 20px;
-      justify-content: flex-end;
-      flex-wrap: wrap;
+      list-style: none; display: flex; gap: 15px;
+      position: relative;
+    }
+
+    nav ul li {
+      position: relative;
     }
 
     nav ul li a {
-      text-decoration: none;
-      color: #333;
-      font-weight: 600;
-      padding: 6px 12px;
+      text-decoration: none; color: #333;
+      font-weight: 600; padding: 6px 12px; border-radius: 6px;
+      transition: 0.3s;
       display: inline-block;
-      border-radius: 6px;
-      transition: all 0.3s ease;
     }
 
-    nav ul li:hover > a {
-      background-color: #00b2e7;
+    nav ul li:hover > a,
+    nav ul li:focus-within > a {
+      background: #00b2e7; color: #fff;
+    }
+
+    /* Dropdown styles */
+    nav ul li ul {
+      position: absolute;
+      top: 100%; left: 0;
+      background: #fff;
+      padding: 10px 0;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      border-radius: 6px;
+      display: none;
+      min-width: 180px;
+      z-index: 1000;
+    }
+
+    nav ul li:hover > ul,
+    nav ul li:focus-within > ul {
+      display: block;
+    }
+
+    nav ul li ul li {
+      width: 100%;
+    }
+
+    nav ul li ul li a {
+      padding: 8px 20px;
+      color: #333;
+      font-weight: 500;
+      display: block;
+      white-space: nowrap;
+    }
+
+    nav ul li ul li a:hover {
+      background: #20a4f3;
       color: #fff;
     }
 
-    .hero {
-      text-align: center;
-      padding: 40px 10px 20px;
+    @media(max-width:768px) {
+      .menu-toggle { display: block; }
+      nav ul {
+        flex-direction: column;
+        position: absolute; top: 100%; left: 0;
+        width: 100%; background: #fff; display: none;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        border-radius: 0 0 8px 8px;
+      }
+      nav ul.active { display: flex; }
+
+      nav ul li ul {
+        position: static;
+        box-shadow: none;
+        padding-left: 15px;
+        display: none !important;
+      }
+      nav ul li.active > ul {
+        display: flex !important;
+        flex-direction: column;
+      }
     }
 
-    .hero h1 {
-      font-size: 2rem;
-      font-weight: 700;
-      margin-bottom: 0;
-      color: #003366;
-      display: inline;
-      margin-right: 10px;
-    }
+    .hero { text-align: center; padding: 30px 10px; }
+    .hero h1 { font-size: 2rem; color: #003366; display: inline; margin-right: 8px; }
 
     #typewriter {
-      font-weight: bold;
-      font-size: 1.3rem;
-      color: deeppink;
-      display: inline;
+      font-weight: bold; font-size: 1.3rem;
+      color: deeppink; display: inline;
       border-right: 2px solid deeppink;
-      white-space: nowrap;
-      overflow: hidden;
+      white-space: nowrap; overflow: hidden;
     }
 
     .news-ticker {
-      background: #31525b;
-      color: #fff;
-      padding: 10px 20px;
-      font-weight: bold;
-      white-space: nowrap;
-      overflow: hidden;
+      background: #31525b; color: #fff;
+      padding: 10px; font-weight: bold;
+      overflow: hidden; white-space: nowrap;
     }
 
     .news-ticker span {
@@ -116,123 +126,122 @@
     }
 
     @keyframes ticker {
-      0% {
-        transform: translateX(0);
-      }
-      100% {
-        transform: translateX(-100%);
-      }
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-100%); }
     }
 
     .contact-section {
-      background: #fff;
-      padding: 60px 20px;
-      max-width: 900px;
-      margin: 40px auto;
-      border-radius: 16px;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      background: #fff; padding: 40px 20px;
+      max-width: 800px; margin: 30px auto;
+      border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);
     }
 
     .contact-section h2 {
-      text-align: center;
-      font-size: 2.2rem;
-      color: #003366;
-      margin-bottom: 40px;
+      text-align: center; font-size: 2rem; color: #003366;
+      margin-bottom: 30px;
     }
 
     .contact-form {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
+      display: flex;
+      flex-wrap: wrap;
       gap: 20px;
     }
 
     .contact-form input,
     .contact-form textarea {
-      width: 100%;
-      padding: 12px;
+      padding: 10px;
       border: 1px solid #ccc;
-      border-radius: 8px;
+      border-radius: 6px;
       font-size: 1rem;
-      font-family: 'Outfit', sans-serif;
+      width: 100%;
+    }
+
+    .contact-form .half {
+      width: 48%;
     }
 
     .contact-form textarea {
-      grid-column: span 2;
-      height: 120px;
       resize: vertical;
+      min-height: 120px;
     }
 
     .contact-form button {
-      grid-column: span 2;
-      padding: 14px;
-      background-color: #20a4f3;
-      border: none;
-      color: #fff;
-      font-size: 1rem;
-      border-radius: 8px;
-      cursor: pointer;
-      transition: background-color 0.3s;
+      width: 100%;
+      padding: 12px;
+      background: #20a4f3; color: #fff;
+      border: none; font-size: 1rem;
+      border-radius: 6px; cursor: pointer;
+      transition: background 0.3s;
     }
 
-    .contact-form button:hover {
-      background-color: #0f8cd1;
-    }
+    .contact-form button:hover { background: #0f8cd1; }
 
     .contact-info {
-      text-align: center;
-      margin-top: 30px;
-      color: #444;
+      text-align: center; margin-top: 20px; color: #444;
     }
 
     footer {
-      text-align: center;
-      padding: 40px 20px;
-      background: #f1f1f1;
-      color: #333;
+      text-align: center; padding: 30px 20px;
+      background: #f1f1f1; color: #333;
     }
 
-    @media (max-width: 768px) {
-      .contact-form {
-        grid-template-columns: 1fr;
+    @media(max-width:768px) {
+      .contact-form .half {
+        width: 100%;
       }
     }
   </style>
 </head>
-
 <body>
+
+  <!-- Updated header with dropdowns and toggle -->
   <header>
     <div class="brand">Gyaankendra</div>
-    <button class="menu-toggle" onclick="document.querySelector('nav ul').classList.toggle('active')">?</button>
+    <button class="menu-toggle" id="btn-menu" aria-label="Toggle Menu">☰</button>
     <nav>
-      <ul>
-        <li><a href="index.html">Home</a></li>
+      <ul id="nav-list">
+        <li><a href="#">Home</a></li>
         <li><a href="about.html">About Us</a></li>
-        <li><a href="#">Universities</a></li>
-        <li><a href="#">Student</a></li>
+        <li tabindex="0">
+          <a href="#">Universities</a>
+          <ul>
+            <li><a href="https://www.shekhauni.ac.in/" target="_blank" rel="noopener noreferrer">Shekhawati University</a></li>
+            <li><a href="https://www.uniraj.ac.in/" target="_blank" rel="noopener noreferrer">Rajasthan University</a></li>
+            <li><a href="https://www.mdsuajmer.ac.in/" target="_blank" rel="noopener noreferrer">Matsya University</a></li>
+          </ul>
+        </li>
+        <li tabindex="0">
+          <a href="#">Student</a>
+          <ul>
+            <li><a href="#">Result</a></li>
+            <li><a href="#">Admit Card</a></li>
+            <li><a href="#">Online Apply</a></li>
+          </ul>
+        </li>
         <li><a href="contact.html">Contact Us</a></li>
       </ul>
     </nav>
   </header>
 
   <div class="hero">
-    <h1>Knowledge Hub</h1>
-    <div id="typewriter"></div>
+    <h1>Knowledge Hub</h1> <div id="typewriter"></div>
   </div>
 
   <div class="news-ticker">
-    <span>?? Admissions now open for 2025 | Apply before the deadline | Visit Gyaankendra for latest updates!</span>
+    <span>🎓 Admissions open for 2025 | Apply before deadline | Visit Gyaankendra for updates!</span>
   </div>
 
   <section class="contact-section">
     <h2>Get in Touch With Us</h2>
-    <form class="contact-form">
-      <input type="text" placeholder="Your Name" required />
-      <input type="email" placeholder="Your Email" required />
-      <input type="tel" placeholder="Your Phone Number" required />
-      <input type="text" placeholder="Subject" required />
-      <textarea placeholder="Your Message" required></textarea>
+    <form id="contact-form" class="contact-form" novalidate>
+      <input class="half" type="text" name="name" placeholder="Your Name" required aria-required="true" />
+      <input class="half" type="tel" name="phone" placeholder="Your Phone Number" required aria-required="true" pattern="[0-9\s+-]{7,15}" title="Please enter a valid phone number" />
+      <input type="email" name="email" placeholder="Your Email" required aria-required="true" />
+      <input type="text" name="university" placeholder="Your University" required aria-required="true" />
+      <textarea name="message" placeholder="Your Message" required aria-required="true"></textarea>
       <button type="submit">Send Message</button>
     </form>
+
     <div class="contact-info">
       <p><strong>Email:</strong> support@gyaankendra.in</p>
       <p><strong>Phone:</strong> +91 9876543210</p>
@@ -245,28 +254,97 @@
   </footer>
 
   <script>
-    const words = ["Shekhawati University", "Rajasthan University", "Matsya University", "Admit Card", "Result", "Admission Form"];
-    let i = 0, j = 0, isDeleting = false;
+    // Navbar toggle for mobile
+    const btnMenu = document.getElementById('btn-menu');
+    const navList = document.getElementById('nav-list');
+    btnMenu.addEventListener('click', () => {
+      navList.classList.toggle('active');
+    });
 
-    function type() {
-      const current = words[i];
-      let display = current.substring(0, j);
-      document.getElementById("typewriter").textContent = display;
+    // Dropdown toggle for mobile
+    if (window.innerWidth <= 768) {
+      const dropdownParents = navList.querySelectorAll('li[tabindex="0"] > a');
+      dropdownParents.forEach(parentLink => {
+        parentLink.addEventListener('click', e => {
+          e.preventDefault();
+          const parentLi = parentLink.parentElement;
+          parentLi.classList.toggle('active');
+        });
+      });
+    }
 
-      if (!isDeleting && j < current.length) {
-        j++;
-        setTimeout(type, 100);
-      } else if (isDeleting && j > 0) {
-        j--;
-        setTimeout(type, 50);
+    // Typewriter effect
+    const typewriterPhrases = [
+      "Explore Courses",
+      "Find Scholarships",
+      "Join Our Community",
+      "Stay Updated"
+    ];
+    let typeIndex = 0, charIndex = 0, typing = true;
+    const typewriterElement = document.getElementById('typewriter');
+
+    function typeWriter() {
+      if (typing) {
+        if (charIndex < typewriterPhrases[typeIndex].length) {
+          typewriterElement.textContent += typewriterPhrases[typeIndex][charIndex];
+          charIndex++;
+          setTimeout(typeWriter, 120);
+        } else {
+          typing = false;
+          setTimeout(typeWriter, 2000);
+        }
       } else {
-        isDeleting = !isDeleting;
-        if (!isDeleting) i = (i + 1) % words.length;
-        setTimeout(type, 1000);
+        if (charIndex > 0) {
+          typewriterElement.textContent = typewriterElement.textContent.slice(0, -1);
+          charIndex--;
+          setTimeout(typeWriter, 60);
+        } else {
+          typing = true;
+          typeIndex = (typeIndex + 1) % typewriterPhrases.length;
+          setTimeout(typeWriter, 500);
+        }
       }
     }
-    type();
-  </script>
-</body>
+    typeWriter();
 
+    // Google Sheets form submission with validation
+     const form = document.getElementById('contact-form');
+  const scriptURL = 'https://script.google.com/macros/s/AKfycbworVbeRyw15vtmd6s4g-GuGwzNIvwC6x9y5Hwhpqo94t3NO1wqSk_xAIDs-5xNmwaubw/exec'; // यहां अपना Web App URL डालें
+
+  form.addEventListener('submit', e => {
+    e.preventDefault();
+
+    if (!form.checkValidity()) {
+      form.reportValidity();
+      return;
+    }
+
+    const formData = new FormData(form);
+
+    fetch(scriptURL, {
+      method: 'POST',
+      body: formData
+    })
+    .then(res => res.json())
+    .then(json => {
+      if (json.result === "success") {
+        if (json.firstTime) {
+          alert("स्वागत है! हमने आपको एक ईमेल भेजा है।");
+        } else {
+          alert("आपका संदेश फिर से प्राप्त हुआ है। धन्यवाद!");
+        }
+        form.reset();
+      } else {
+        alert("कुछ गलत हो गया है: " + json.error);
+        console.error(json.error);
+      }
+    })
+    .catch(error => {
+      alert("नेटवर्क त्रुटि! कृपया दोबारा प्रयास करें।");
+      console.error('Error:', error);
+    });
+  });
+  </script>
+
+</body>
 </html>

@@ -355,6 +355,27 @@
     window.onscroll = () => {
       scrollBtn.style.display = window.scrollY > 300 ? "block" : "none";
     };
+
+// Navbar toggle for mobile
+    const btnMenu = document.getElementById('btn-menu');
+    const navList = document.getElementById('nav-list');
+    btnMenu.addEventListener('click', () => {
+      navList.classList.toggle('active');
+    });
+
+    // Dropdown toggle for mobile
+    if (window.innerWidth <= 768) {
+      const dropdownParents = navList.querySelectorAll('li[tabindex="0"] > a');
+      dropdownParents.forEach(parentLink => {
+        parentLink.addEventListener('click', e => {
+          e.preventDefault();
+          const parentLi = parentLink.parentElement;
+          parentLi.classList.toggle('active');
+        });
+      });
+    }
+
+                   
   </script>
 </body>
 

@@ -1,15 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Shekhawati University Online Forms, Results, Admit Cards, and Notifications - Gyaankendra</title>
-  <meta name="description" content="Get all the latest updates on Shekhawati University Online Forms, Admit Cards, Exam Results, and Notifications. Stay informed with quick links to all important notifications and forms for various courses like BA, MA, B.Ed, and more. Apply online, download admit cards, check your results, and stay updated on all important events with Gyaankendra - your gateway to Shekhawati University information.">
-<meta name="keywords" content="Shekhawati University online forms, Shekhawati University admit cards, Shekhawati University results, Shekhawati University notifications, BA admission form, MA admission form, B.Ed online form, Shekhawati University exam results, Shekhawati University notification updates, Shekhawati University 2025 admissions">
-
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Gyaankendra - Contact Us</title>
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&display=swap" rel="stylesheet" />
- <style>
+  <style>
     * { box-sizing: border-box; margin: 0; padding: 0; }
     body { font-family: 'Outfit', sans-serif; background: #f4f8fb; color: #222; }
 
@@ -227,19 +223,19 @@
 </head>
 
 <body>
-  <header>
+   <header>
     <div class="brand">Gyaankendra</div>
     <button class="menu-toggle" id="btn-menu" aria-label="Toggle Menu">☰</button>
     <nav>
-      <ul>
+      <ul id="nav-list">
         <li><a href="index.html">Home</a></li>
         <li><a href="about.html">About Us</a></li>
         <li tabindex="0">
           <a href="#">Universities</a>
           <ul>
-            <li><a href="https://www.shekhauni.ac.in/" target="_blank">Shekhawati University</a></li>
-            <li><a href="https://www.uniraj.ac.in/" target="_blank">Rajasthan University</a></li>
-            <li><a href="https://www.mdsuajmer.ac.in/" target="_blank">Matsya University</a></li>
+            <li><a href="https://www.shekhauni.ac.in/" target="_blank" rel="noopener noreferrer">Shekhawati University</a></li>
+            <li><a href="https://www.uniraj.ac.in/" target="_blank" rel="noopener noreferrer">Rajasthan University</a></li>
+            <li><a href="https://www.mdsuajmer.ac.in/" target="_blank" rel="noopener noreferrer">Matsya University</a></li>
           </ul>
         </li>
         <li tabindex="0">
@@ -341,7 +337,13 @@
     type();
 
 
-    // Navbar toggle for mobile
+                     
+    const scrollBtn = document.getElementById("scrollTopBtn");
+    window.onscroll = () => {
+      scrollBtn.style.display = window.scrollY > 300 ? "block" : "none";
+    };
+
+     // Navbar toggle for mobile
     const btnMenu = document.getElementById('btn-menu');
     const navList = document.getElementById('nav-list');
     btnMenu.addEventListener('click', () => {
@@ -359,12 +361,7 @@
         });
       });
     }
-
-                   
-    const scrollBtn = document.getElementById("scrollTopBtn");
-    window.onscroll = () => {
-      scrollBtn.style.display = window.scrollY > 300 ? "block" : "none";
-    };
+    
   </script>
 </body>
 

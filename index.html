@@ -8,56 +8,28 @@
   <meta name="description" content="Get all the latest updates on Shekhawati University Online Forms, Admit Cards, Exam Results, and Notifications. Stay informed with quick links to all important notifications and forms for various courses like BA, MA, B.Ed, and more. Apply online, download admit cards, check your results, and stay updated on all important events with Gyaankendra - your gateway to Shekhawati University information.">
 <meta name="keywords" content="Shekhawati University online forms, Shekhawati University admit cards, Shekhawati University results, Shekhawati University notifications, BA admission form, MA admission form, B.Ed online form, Shekhawati University exam results, Shekhawati University notification updates, Shekhawati University 2025 admissions">
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&display=swap" rel="stylesheet">
-  <style>
-    * { box-sizing: border-box; }
-
-    body {
-      margin: 0;
-      font-family: 'Outfit', sans-serif;
-      background: #f4f8fb;
-      color: #222;
-    }
+ <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'Outfit', sans-serif; background: #f4f8fb; color: #222; }
 
     header {
-      background-color: #ffffff;
-      padding: 20px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      background: #fff; padding: 10px 20px;
+      display: flex; align-items: center; justify-content: space-between;
+      position: sticky; top: 0; z-index: 1000;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
       flex-wrap: wrap;
     }
 
-    .brand {
-      font-size: 2rem;
-      font-weight: 700;
-      color: #20a4f3;
-    }
+    .brand { font-size: 1.8rem; font-weight: 700; color: #20a4f3; }
 
     .menu-toggle {
-      display: none;
-      font-size: 1.5rem;
-      background: none;
-      border: none;
-      cursor: pointer;
-    }
-
-    nav {
-      flex: 1;
-      text-align: right;
+      font-size: 1.8rem; background: none; border: none;
+      display: none; cursor: pointer;
     }
 
     nav ul {
-      list-style: none;
-      margin: 0;
-      padding: 0;
-      display: flex;
-      gap: 20px;
-      justify-content: flex-end;
-      flex-wrap: wrap;
+      list-style: none; display: flex; gap: 15px;
+      position: relative;
     }
 
     nav ul li {
@@ -65,95 +37,89 @@
     }
 
     nav ul li a {
-      text-decoration: none;
-      color: #333;
-      font-weight: 600;
-      padding: 6px 12px;
+      text-decoration: none; color: #333;
+      font-weight: 600; padding: 6px 12px; border-radius: 6px;
+      transition: 0.3s;
       display: inline-block;
-      transition: all 0.3s;
-      border-radius: 6px;
     }
 
     nav ul li:hover > a,
     nav ul li:focus-within > a {
-      background-color: #20a4f3;
-      color: #fff;
+      background: #00b2e7; color: #fff;
     }
 
+    /* Dropdown styles */
     nav ul li ul {
-      display: none;
       position: absolute;
-      background-color: #fff;
-      padding: 10px;
-      border-radius: 8px;
-      top: 100%;
-      left: 0;
-      z-index: 1000;
+      top: 100%; left: 0;
+      background: #fff;
+      padding: 10px 0;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      border-radius: 6px;
+      display: none;
       min-width: 180px;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.15);
+      z-index: 1000;
     }
 
-    nav ul li:hover ul,
-    nav ul li:focus-within ul {
+    nav ul li:hover > ul,
+    nav ul li:focus-within > ul {
       display: block;
+    }
+
+    nav ul li ul li {
+      width: 100%;
     }
 
     nav ul li ul li a {
+      padding: 8px 20px;
+      color: #333;
+      font-weight: 500;
       display: block;
-      color: #20a4f3;
+      white-space: nowrap;
     }
 
-    /* Mobile Menu Styles */
-    @media screen and (max-width: 768px) {
-      .menu-toggle {
-        display: block; /* Show hamburger icon */
-      }
+    nav ul li ul li a:hover {
+      background: #20a4f3;
+      color: #fff;
+    }
 
+    @media(max-width:768px) {
+      .menu-toggle { display: block; }
       nav ul {
         flex-direction: column;
-        display: none;
-        background-color: #fff;
-        width: 100%;
-        padding: 10px 0;
-        box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        position: absolute; top: 100%; left: 0;
+        width: 100%; background: #fff; display: none;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        border-radius: 0 0 8px 8px;
       }
+      nav ul.active { display: flex; }
 
-      nav ul.active {
-        display: flex; /* Show menu when active */
+      nav ul li ul {
+        position: static;
+        box-shadow: none;
+        padding-left: 15px;
+        display: none !important;
+      }
+      nav ul li.active > ul {
+        display: flex !important;
+        flex-direction: column;
       }
     }
 
-    .hero {
-      text-align: center;
-      padding: 40px 10px 20px;
-    }
-
-    .hero h1 {
-      font-size: 2rem;
-      font-weight: 700;
-      margin-bottom: 0;
-      color: #003366;
-      display: inline;
-      margin-right: 10px;
-    }
+    .hero { text-align: center; padding: 30px 10px; }
+    .hero h1 { font-size: 2rem; color: #003366; display: inline; margin-right: 8px; }
 
     #typewriter {
-      font-weight: 600;
-      font-size: 1.3rem;
-      color: #20a4f3;
-      display: inline;
-      border-right: 2px solid #20a4f3;
-      white-space: nowrap;
-      overflow: hidden;
+      font-weight: bold; font-size: 1.3rem;
+      color: deeppink; display: inline;
+      border-right: 2px solid deeppink;
+      white-space: nowrap; overflow: hidden;
     }
 
     .news-ticker {
-      background: #31525b;
-      color: #fff;
-      padding: 10px 20px;
-      font-weight: bold;
-      white-space: nowrap;
-      overflow: hidden;
+      background: #31525b; color: #fff;
+      padding: 10px; font-weight: bold;
+      overflow: hidden; white-space: nowrap;
     }
 
     .news-ticker span {
@@ -166,7 +132,7 @@
       0% { transform: translateX(0); }
       100% { transform: translateX(-100%); }
     }
-
+   
     .info-sections {
       display: flex;
       justify-content: center;
@@ -262,7 +228,7 @@
 <body>
   <header>
     <div class="brand">Gyaankendra</div>
-    <button class="menu-toggle" onclick="document.querySelector('nav ul').classList.toggle('active')">&#9776;</button>
+    <button class="menu-toggle" id="btn-menu" aria-label="Toggle Menu">☰</button>
     <nav>
       <ul>
         <li><a href="index.html">Home</a></li>
@@ -373,6 +339,27 @@
     }
     type();
 
+
+    // Navbar toggle for mobile
+    const btnMenu = document.getElementById('btn-menu');
+    const navList = document.getElementById('nav-list');
+    btnMenu.addEventListener('click', () => {
+      navList.classList.toggle('active');
+    });
+
+    // Dropdown toggle for mobile
+    if (window.innerWidth <= 768) {
+      const dropdownParents = navList.querySelectorAll('li[tabindex="0"] > a');
+      dropdownParents.forEach(parentLink => {
+        parentLink.addEventListener('click', e => {
+          e.preventDefault();
+          const parentLi = parentLink.parentElement;
+          parentLi.classList.toggle('active');
+        });
+      });
+    }
+
+                   
     const scrollBtn = document.getElementById("scrollTopBtn");
     window.onscroll = () => {
       scrollBtn.style.display = window.scrollY > 300 ? "block" : "none";

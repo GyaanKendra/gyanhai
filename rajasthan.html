@@ -287,8 +287,9 @@
 </head>
 
 <body>
-  <div class="brand">Gyaankendra</div>
-    <button class="menu-toggle" id="btn-menu" aria-label="Toggle Menu">?</button>
+   <header>
+    <div class="brand">Gyaankendra</div>
+    <button class="menu-toggle" id="btn-menu" aria-label="Toggle Menu">☰</button>
     <nav>
       <ul id="nav-list">
         <li><a href="index.html">Home</a></li>
@@ -320,7 +321,7 @@
   </div>
 
   <div class="news-ticker">
-    <span>?? Admissions now open for 2025 | Apply before the deadline | Visit Gyaankendra for latest updates!</span>
+      <span>🎓 Admissions now open for 2025 | Apply before the deadline | Visit Gyaankendra for latest updates!</span>
   </div>
 <div class="hero">
         <h1>Rajasthan University</h1>
@@ -411,6 +412,26 @@ Admission Opening</a>
     window.onscroll = () => {
       scrollBtn.style.display = window.scrollY > 300 ? "block" : "none";
     };
+
+     // Navbar toggle for mobile
+    const btnMenu = document.getElementById('btn-menu');
+    const navList = document.getElementById('nav-list');
+    btnMenu.addEventListener('click', () => {
+      navList.classList.toggle('active');
+    });
+
+    // Dropdown toggle for mobile
+    if (window.innerWidth <= 768) {
+      const dropdownParents = navList.querySelectorAll('li[tabindex="0"] > a');
+      dropdownParents.forEach(parentLink => {
+        parentLink.addEventListener('click', e => {
+          e.preventDefault();
+          const parentLi = parentLink.parentElement;
+          parentLi.classList.toggle('active');
+        });
+      });
+    }
+    
   </script>
 </body>
 

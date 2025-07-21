@@ -3,7 +3,9 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Gyaankendra - Contact Us</title>
+  <meta name="description" content="Get latest updates on Rajasthan, Shekhawati & Matsya University exam forms, admit cards, results & official notifications. Stay updated with Gyaankendra – your trusted student help center.">
+<meta name="keywords" content="Rajasthan University Exam Form, Shekhawati Admit Card, Matsya University Result, Rajasthan University Notification, Gyaankendra, Uniraj Form 2025, MDU Ajmer Admit Card, PDUSU Sikar Result">
+  <title>Rajasthan University, Shekhawati & Matsya Exam Form, Admit Card, Result - Gyaankendra</title>
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&display=swap" rel="stylesheet" />
   <style>
     * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -286,8 +288,9 @@
 </head>
 
 <body>
-  <div class="brand">Gyaankendra</div>
-    <button class="menu-toggle" id="btn-menu" aria-label="Toggle Menu">?</button>
+   <header>
+    <div class="brand">Gyaankendra</div>
+    <button class="menu-toggle" id="btn-menu" aria-label="Toggle Menu">☰</button>
     <nav>
       <ul id="nav-list">
         <li><a href="index.html">Home</a></li>
@@ -319,7 +322,7 @@
   </div>
 
   <div class="news-ticker">
-    <span>?? Admissions now open for 2025 | Apply before the deadline | Visit Gyaankendra for latest updates!</span>
+  <span>🎓 Admissions now open for 2025 | Apply before the deadline | Visit Gyaankendra for latest updates!</span>
   </div>
 <div class="hero">
         <h1>Matsya University</h1>
@@ -410,6 +413,26 @@ Admission Opening</a>
     window.onscroll = () => {
       scrollBtn.style.display = window.scrollY > 300 ? "block" : "none";
     };
+
+
+     // Navbar toggle for mobile
+    const btnMenu = document.getElementById('btn-menu');
+    const navList = document.getElementById('nav-list');
+    btnMenu.addEventListener('click', () => {
+      navList.classList.toggle('active');
+    });
+
+    // Dropdown toggle for mobile
+    if (window.innerWidth <= 768) {
+      const dropdownParents = navList.querySelectorAll('li[tabindex="0"] > a');
+      dropdownParents.forEach(parentLink => {
+        parentLink.addEventListener('click', e => {
+          e.preventDefault();
+          const parentLi = parentLink.parentElement;
+          parentLi.classList.toggle('active');
+        });
+      });
+    }
   </script>
 </body>
 

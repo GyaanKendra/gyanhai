@@ -101,6 +101,26 @@
       color: #20a4f3;
     }
 
+    /* Mobile Menu Styles */
+    @media screen and (max-width: 768px) {
+      .menu-toggle {
+        display: block; /* Show hamburger icon */
+      }
+
+      nav ul {
+        flex-direction: column;
+        display: none;
+        background-color: #fff;
+        width: 100%;
+        padding: 10px 0;
+        box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      }
+
+      nav ul.active {
+        display: flex; /* Show menu when active */
+      }
+    }
+
     .hero {
       text-align: center;
       padding: 40px 10px 20px;
@@ -234,32 +254,13 @@
       display: none;
       box-shadow: 0 2px 10px rgba(0,0,0,0.2);
     }
-
-    @media screen and (max-width: 768px) {
-      .menu-toggle {
-        display: block;
-      }
-
-      nav ul {
-        flex-direction: column;
-        display: none;
-        background-color: #fff;
-        width: 100%;
-        padding: 10px 0;
-        box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-      }
-
-      nav ul.active {
-        display: flex;
-      }
-    }
   </style>
 </head>
 
 <body>
   <header>
     <div class="brand">Gyaankendra</div>
-    <button class="menu-toggle" onclick="document.querySelector('nav ul').classList.toggle('active')">?</button>
+    <button class="menu-toggle" onclick="document.querySelector('nav ul').classList.toggle('active')">&#9776;</button>
     <nav>
       <ul>
         <li><a href="#">Home</a></li>

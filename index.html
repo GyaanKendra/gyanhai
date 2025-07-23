@@ -276,6 +276,129 @@
       font-weight: 600;
     }
 
+    // subscribe 
+* { 
+      box-sizing: border-box; 
+      margin: 0; 
+      padding: 0; 
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: #000000;
+      color: #222;
+      padding: 0px;
+      margin: 0;
+    }
+
+    .subscription-form {
+      background-color: #d91f3e;
+      padding: 40px;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      width: 100%;
+      max-width: 700px;
+      margin: auto;
+      text-align: center;
+    }
+
+    .subscription-form h2 {
+      font-size: 2rem;
+      color: white;
+      margin-bottom: 10px;
+    }
+
+    .subscription-form p {
+      color: #ffffff;
+      font-size: 1.1rem;
+      margin-bottom: 20px;
+    }
+
+    .form-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+
+    .input-field {
+      width: 70%;
+      padding: 12px;
+      border-radius: 8px;
+      border: 1px solid #ddd;
+      font-size: 1rem;
+      margin-right: 10px;
+    }
+
+    .input-field:focus {
+      outline: none;
+      border-color: #20a4f3;
+    }
+
+    .submit-button {
+      padding: 12px 24px;
+      background-color: #20a4f3;
+      color: white;
+      font-size: 1rem;
+      border-radius: 8px;
+      border: none;
+      cursor: pointer;
+      width: 25%;
+      transition: background-color 0.3s;
+    }
+
+    .submit-button:disabled {
+      background-color: #ddd;
+      cursor: not-allowed;
+    }
+
+    .submit-button:hover {
+      background-color: #0069d9;
+    }
+
+    .error-message {
+      color: red;
+      font-size: 0.9rem;
+      margin-bottom: 10px;
+    }
+
+    .success-message {
+      color: green;
+      font-size: 1.1rem;
+      margin-top: 10px;
+    }
+
+    .welcome-message {
+      font-size: 1rem;
+      margin-top: 15px;
+      color: #333;
+      font-weight: 500;
+    }
+
+    @media (max-width: 768px) {
+      .subscription-form {
+        padding: 20px;
+      }
+
+      .input-field {
+        width: 100%;
+        font-size: 0.9rem;
+      }
+
+      .submit-button {
+        width: 100%;
+        font-size: 1rem;
+      }
+    }
+    
+    @media (max-width: 600px) {
+      .submit-button {
+        font-size: 0.9rem;
+      }
+    }
+
+
+    
     footer {
       text-align: center;
       padding: 40px 20px;
@@ -397,7 +520,27 @@
       </div>
     </div>
   </div>
-
+  
+// susbcribe form
+  <div class="subscription-form">
+  <h2>Joined Thousands Of Happy Students!</h2>
+  <p>Subscribe to our newsletter & get the latest news and updates!</p>
+  
+  <!-- Error Message (Initially Hidden) -->
+  <div id="error-message" class="error-message" style="display: none;"></div>
+  
+  <!-- Success Message (Initially Hidden) -->
+  <div id="success-message" class="success-message" style="display: none;"></div>
+  
+  <!-- Welcome Message (Initially Hidden) -->
+  <div id="welcome-message" class="welcome-message" style="display: none;"></div>
+  
+  <div class="form-container">
+    <input type="email" id="user-input" class="input-field" placeholder="Enter Your Email" />
+    <button id="subscribe-btn" class="submit-button" disabled>Subscribe</button>
+  </div>
+</div>
+  
   <footer>
     <p>&copy; 2025 Gyaankendra. All rights reserved.</p>
   </footer>
@@ -497,7 +640,117 @@ createDots();
 goToSlide(0);
 startAutoSlide();
 
+// subscribe form
+    const subscribeBtn = document.getElementById('subscribe-btn');
+  const userInput = document.getElementById('user-input');
+  const errorMessage = document.getElementById('error-message');
+  const successMessage = document.getElementById('success-message');
+  const welcomeMessage = document.getElementById('welcome-message');
 
+  // Check submission attempts from LocalStorage
+  function checkAttempts() {
+    const attempts = localStorage.getItem('submissionAttempts') || 0;
+    const lastAttemptTime = localStorage.getItem('lastAttemptTime');
+    const currentTime = new Date().getTime();
+    const blockDuration = 2 * 60 * 60 * 1000; // 2 hours in milliseconds
+
+    if (attempts >= 3 && (currentTime - lastAttemptTime) < blockDuration) {
+      const timeRemaining = (blockDuration - (currentTime - lastAttemptTime)) / 1000;
+      const hours = Math.floor(timeRemaining / 3600);
+      const minutes = Math.floor((timeRemaining % 3600) / 60);
+      blockedMessage.textContent = `You are blocked. You can try again in ${hours} hours and ${minutes} minutes.`;
+      blockedMessage.style.display = 'block';
+      subscribeBtn.disabled = true;
+      return false;
+    }
+
+    return true;
+  }
+
+  // Validate if the input is a valid Gmail email
+  function validateInput(input) {
+    const emailRegex = /^[a-zA-Z0-9._%+-]+@gmail\.com$/;
+
+    if (emailRegex.test(input)) {
+      return true;
+    } else {
+      return false;
+    }
+  }
+
+  // Enable Subscribe Button if the email is valid
+  userInput.addEventListener('input', function() {
+    const input = userInput.value;
+
+    if (validateInput(input)) {
+      subscribeBtn.disabled = false;
+      errorMessage.style.display = 'none';
+    } else {
+      subscribeBtn.disabled = true;
+      errorMessage.style.display = 'none';
+    }
+  });
+
+  // On Subscribe Button Click
+  subscribeBtn.addEventListener('click', function() {
+    const input = userInput.value;
+    const validationResult = validateInput(input);
+
+    // If email is not valid
+    if (!validationResult) {
+      errorMessage.textContent = "Please enter a valid Gmail address.";
+      errorMessage.style.display = 'block';
+      return;
+    }
+
+    // Check if the user is blocked due to too many attempts
+    if (!checkAttempts()) {
+      return;
+    }
+
+    // Track and increment submission attempts
+    const attempts = parseInt(localStorage.getItem('submissionAttempts')) || 0;
+    localStorage.setItem('submissionAttempts', attempts + 1);
+    localStorage.setItem('lastAttemptTime', new Date().getTime());
+
+    // Clear error messages
+    errorMessage.style.display = 'none';
+
+    successMessage.textContent = "Thank you for subscribing! A welcome email has been sent to you.";
+    successMessage.style.display = 'block';
+
+    // Display welcome message on the webpage
+    welcomeMessage.textContent = "Welcome to Gyaankendra! We'll keep you updated with university alerts.";
+    welcomeMessage.style.display = 'block';
+
+    // Call Google Sheets API here to save data and send email
+    sendWelcomeEmail(input); // send email
+    saveToGoogleSheet(input); // save to Google Sheet
+  });
+
+  function sendWelcomeEmail(input) {
+    const url = "https://script.google.com/macros/s/AKfycbxDasZpOmJwqCezzeYusZWV2vNPEmn6HPXBUyAMsL1BVPcNVLJj3erf43TTo-BTqyCS/exec"; // Replace with your Google Apps Script Web App URL
+
+    const data = {
+      "emailOrPhone": input  // Send the email or phone number to the Google Apps Script
+    };
+
+    fetch(url, {
+      method: "POST",
+      body: new URLSearchParams(data)  // Send data in the correct format
+    })
+    .then(response => response.json())
+    .then(result => {
+      console.log(result);  // Handle the response if needed
+    })
+    .catch(error => {
+      console.error('Error:', error);  // Handle errors if any
+    });
+  }
+
+  function saveToGoogleSheet(input) {
+    console.log(`Saving data to Google Sheets: ${input}`);
+  }
     
      // Navbar toggle for mobile
     const btnMenu = document.getElementById('btn-menu');

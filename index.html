@@ -277,8 +277,95 @@
     }
 
 
-
-
+/* articles */
+.articles {
+  background: #f9fafb;
+  padding: 50px 20px;
+  font-family: Arial, sans-serif;
+}
+.section-title {
+  text-align: center;
+  font-size: 26px;
+  font-weight: bold;
+  margin-bottom: 35px;
+  color: #222;
+  position: relative;
+}
+.section-title::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 3px;
+  background: #007bff;
+  margin: 10px auto 0;
+  border-radius: 2px;
+}
+.article-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+  max-width: 1200px;
+  margin: auto;
+}
+.article-card {
+  background: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+  transition: transform 0.3s ease;
+}
+.article-card:hover {
+  transform: translateY(-5px);
+}
+.article-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+.article-content {
+  padding: 15px;
+}
+.article-content h3 {
+  font-size: 18px;
+  margin: 0 0 8px;
+  color: #333;
+  line-height: 1.3;
+}
+.article-content p {
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 12px;
+  line-height: 1.5;
+}
+.read-btn {
+  display: inline-block;
+  padding: 6px 12px;
+  background: #007bff;
+  color: #fff;
+  font-size: 14px;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: background 0.3s;
+}
+.read-btn:hover {
+  background: #0056b3;
+}
+.view-all {
+  text-align: center;
+  margin-top: 30px;
+}
+.view-all-btn {
+  background: #28a745;
+  color: #fff;
+  padding: 8px 16px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-size: 15px;
+  transition: background 0.3s;
+}
+.view-all-btn:hover {
+  background: #1e7e34;
+}
 
 
     
@@ -618,6 +705,61 @@
       </div>
     </div>
   </div>
+
+  <!-- Article Section -->
+<section class="articles">
+  <div class="container">
+    <h2 class="section-title">📚 Latest Educational Updates & Career Tips</h2>
+    <div class="article-grid">
+
+      <!-- Article 1 -->
+      <div class="article-card">
+        <img src="images/result-guide.jpg" alt="Result Guide">
+        <div class="article-content">
+          <h3>Shekhawati University Result 2025 Check Karne Ka Asaan Tarika</h3>
+          <p>Mobile par result check karna ab easy! Yeh step-by-step guide aapko marksheet download aur common errors solve karne ka best tarika batati hai.</p>
+          <a href="result-guide.html" class="read-btn">Read More →</a>
+        </div>
+      </div>
+
+      <!-- Article 2 -->
+      <div class="article-card">
+        <img src="images/top-universities.jpg" alt="Top Universities">
+        <div class="article-content">
+          <h3>Rajasthan ke Top 5 Universities Jahan Admission Lena Chahiye</h3>
+          <p>Academic ranking aur placement record ke basis par Rajasthan ki top 5 universities ki list jo aapke career ke liye best ho sakti hain.</p>
+          <a href="top-universities.html" class="read-btn">Read More →</a>
+        </div>
+      </div>
+
+      <!-- Article 3 -->
+      <div class="article-card">
+        <img src="images/study-hacks.jpg" alt="Study Hacks">
+        <div class="article-content">
+          <h3>Exam Mein Top Karne Ke 7 Proven Study Hacks</h3>
+          <p>Experts ke 7 study hacks jo aapki preparation ko double speed pe kar denge. School, college aur competitive exams sab ke liye useful.</p>
+          <a href="study-hacks.html" class="read-btn">Read More →</a>
+        </div>
+      </div>
+
+      <!-- Article 4 -->
+      <div class="article-card">
+        <img src="images/admit-card.jpg" alt="Admit Card Download">
+        <div class="article-content">
+          <h3>Admit Card Download Nahi Ho Raha? Yeh 3 Tricks Zaroor Try Karein</h3>
+          <p>Admit card download issues ka simple solution. Step-by-step guide jo server busy aur invalid details ke problem solve karegi.</p>
+          <a href="admit-card-tips.html" class="read-btn">Read More →</a>
+        </div>
+      </div>
+
+    </div>
+    <div class="view-all">
+      <a href="#" class="view-all-btn">View All Articles</a>
+    </div>
+  </div>
+</section>
+
+
   
  <!-- susbcribe form -->
   <div class="subscription-form">
@@ -652,9 +794,9 @@
     <!-- Important Links -->
     <div class="footer-column">
       <h3>Imp. Link</h3>
-      <a href="#">Home</a><br>
-      <a href="#">About us</a><br>
-      <a href="#">Contact us</a><br>
+      <a href="index.html">Home</a><br>
+      <a href="about.html">About us</a><br>
+      <a href="contact.html">Contact us</a><br>
       <a href="#">Our articles</a><br>
       <a href="#">Privacy Policy</a><br>
       <a href="#">Terms & Conditions</a>
@@ -684,9 +826,9 @@
     <!-- Universites -->
     <div class="footer-column">
       <h3>Universities</h3>
-      <a href="#">Shekhawati University</a><br>
-      <a href="#">Rajasthan University</a><br>
-      <a href="#">Matsya Univesity</a><br>
+     <a href="https://www.shekhauni.ac.in/" target="_blank" rel="noopener noreferrer">Shekhawati University</a><br>
+      <a href="https://www.uniraj.ac.in/" target="_blank" rel="noopener noreferrer">Rajasthan University</a><br>
+     <a href="https://www.mdsuajmer.ac.in/" target="_blank" rel="noopener noreferrer">MGS University</a><br>
     </div>
 
   </footer>

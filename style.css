@@ -285,7 +285,7 @@
   clear: both;
 }
 
-    .reaction-bar {
+   .reaction-bar {
   display: flex;
   justify-content: center;   /* ✅ Center align */
   gap: 15px;                 /* ✅ Icons ke beech gap */

@@ -241,8 +241,11 @@
   font-size: 2rem;
   color: #222;
   margin-bottom: 30px;
-  text-align: center; /* ✅ Center heading */
+  width: 100%;
+  display: block;
+  text-align: center !important;   /* ✅ Force center */
 }
+
 
     .success-box {
       display: flex;
@@ -262,20 +265,25 @@
       justify-content: space-between;
     }
 
-    .success-card p {
-      margin: 0 0 10px;
-      color: #555;
-      font-size: 0.95rem;
-      text-align: justify;
-    }
+  /* Card content justify */
+.success-card p {
+  margin: 0 0 10px;
+  color: #555;
+  font-size: 0.95rem;
+  text-align: justify !important;  /* ✅ Force justify */
+}
 
-    .success-card span {
-      font-size: 0.85rem;
-      color: #20a4f3;
-      font-weight: 600;
-      display: block;
-      text-align: right;
-    }
+   /* User name right side */
+.success-card span {
+  font-size: 0.85rem;
+  color: #20a4f3;
+  font-weight: 600;
+  display: block;
+  width: 100%;
+  text-align: right !important;    /* ✅ Force right */
+  float: none !important;          /* ✅ Remove any float effect */
+  clear: both;
+}
 
     .reaction-bar {
       display: flex;

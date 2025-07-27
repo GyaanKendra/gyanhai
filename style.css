@@ -236,11 +236,13 @@
       text-align: Justify;
     }
 
-    .success-stories h2 {
-      font-size: 2rem;
-      color: #222;
-      margin-bottom: 30px;
-    }
+    /* Success story heading center */
+.success-stories h2 {
+  font-size: 2rem;
+  color: #222;
+  margin-bottom: 30px;
+  text-align: center; /* ✅ Center heading */
+}
 
     .success-box {
       display: flex;
@@ -264,12 +266,15 @@
       margin: 0 0 10px;
       color: #555;
       font-size: 0.95rem;
+      text-align: justify;
     }
 
     .success-card span {
       font-size: 0.85rem;
       color: #20a4f3;
       font-weight: 600;
+      display: block;
+      text-align: right;
     }
 
     .reaction-bar {

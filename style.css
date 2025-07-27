@@ -294,13 +294,16 @@
   border-top: 1px solid #eee;
 }
 
-    .reaction {
-      cursor: pointer;
-      font-size: 1.4rem;
-      transition: transform 0.2s, color 0.2s;
-      user-select: none;
-      color: #888;
-    }
+   .reaction {
+  display: flex;             /* ✅ Icon aur count ek hi line me */
+  align-items: center;       /* ✅ Vertical center */
+  gap: 5px;                  /* Icon aur count ke beech gap */
+  cursor: pointer;
+  font-size: 1.4rem;
+  transition: transform 0.2s, color 0.2s;
+  user-select: none;
+  color: #888;
+}
 
     .reaction.active {
       transform: scale(1.3);

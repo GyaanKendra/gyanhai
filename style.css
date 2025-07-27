@@ -294,15 +294,18 @@
   border-top: 1px solid #eee;
 }
 
-   .reaction {
-  display: flex;             /* ✅ Icon aur count ek hi line me */
-  align-items: center;       /* ✅ Vertical center */
-  gap: 5px;                  /* Icon aur count ke beech gap */
+  .reaction {
+  display: inline-flex;       /* ✅ Inline-flex se ek line me fix */
+  align-items: center;        /* ✅ Vertical center */
+  flex-direction: row;        /* ✅ Icon aur count side-by-side */
+  gap: 4px;
   cursor: pointer;
   font-size: 1.4rem;
   transition: transform 0.2s, color 0.2s;
   user-select: none;
   color: #888;
+  line-height: 1;             /* ✅ Extra gap remove */
+  white-space: nowrap;        /* ✅ Wrap hone se rokega */
 }
 
     .reaction.active {
@@ -310,11 +313,13 @@
       color: #ff4081;
     }
 
-    .reaction .count {
-      font-size: 0.9rem;
-      margin-left: 4px;
-      vertical-align: middle;
-    }
+ 
+.reaction .count {
+  font-size: 0.9rem;
+  margin: 0;
+  display: inline-block;      /* ✅ Force same line */
+  vertical-align: middle;
+}
 
 
 

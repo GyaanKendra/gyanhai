@@ -178,68 +178,37 @@
    </div>
   </div>
 
-  
-  <!-- Success story -->
-  <div class="success-stories">
-   <h2>
-    🎓 Student Success Stories
-   </h2>
-   <div class="success-box">
-    <!-- CARD 1 -->
-    <div class="success-card" data-post-id="post-1">
-     <p>
-      "Main PDSU ki website se judkar apni journey ko ek nayi disha mein le gaya hoon. PDSU ne hamesha mujhe support kiya hai, chahe wo padhai ho ya personal challenges..."
-     </p>
-     <span style="float: right;">
-      - Ravi Sharma
-     </span>
 
-     <div class="reaction-bar">
-  <span class="reaction" data-type="like">❤️<span class="count">0</span></span>
-  <span class="reaction" data-type="thumb">👍<span class="count">0</span></span>
-  <span class="reaction" data-type="smile">😄<span class="count">0</span></span>
-  <span class="reaction" data-type="dislike">👎<span class="count">0</span></span>
-</div>
-     </div>
-
-
-     
-     
-    <!-- CARD 2 -->
-    <div class="success-card" data-post-id="post-2">
-     <p>
-      "PDSU ki website ne meri life mein bohot positive change laaye hain. Yahan ki supportive community aur valuable resources ne mujhe har challenge ka saamna karne ki taqat di..."
-     </p>
-     <span>
-      - Neha Verma
-     </span>
-     <div class="reaction-bar">
-      <span class="reaction" data-type="like">
-       ❤️
-       <span class="count">
-        0
-       </span>
-      </span>
-      <span class="reaction" data-type="thumb">
-       👍
-       <span class="count">
-        0
-       </span>
-      </span>
-      <span class="reaction" data-type="smile">
-       😄
-       <span class="count">
-        0
-       </span>
-      </span>
-      <span class="reaction" data-type="dislike">
-       👎
-       <span class="count">
-        0
-       </span>
-      </span>
-     </div>
+<!-- ✅ Student Success Stories Section -->
+<div class="success-stories">
+  <h2>🎓 Student Success Stories</h2>
+  <div class="success-box">
+    <div class="success-card" data-post="post1">
+      <p>"Main PDSU ki website se judkar apni journey ko ek nayi disha mein le gaya hoon..."</p>
+      <span>- Ravi Sharma</span>
+      <div class="reaction-bar">
+        <span class="reaction" data-type="like">❤️ <span class="count">0</span></span>
+        <span class="reaction" data-type="thumb">👍 <span class="count">0</span></span>
+        <span class="reaction" data-type="smile">😄 <span class="count">0</span></span>
+        <span class="reaction" data-type="dislike">👎 <span class="count">0</span></span>
+      </div>
     </div>
+
+    <div class="success-card" data-post="post2">
+      <p>"PDSU ki website ne meri life mein bohot positive change laaye hain..."</p>
+      <span>- Neha Verma</span>
+      <div class="reaction-bar">
+        <span class="reaction" data-type="like">❤️ <span class="count">0</span></span>
+        <span class="reaction" data-type="thumb">👍 <span class="count">0</span></span>
+        <span class="reaction" data-type="smile">😄 <span class="count">0</span></span>
+        <span class="reaction" data-type="dislike">👎 <span class="count">0</span></span>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+  
     <!-- CARD 3 -->
     <div class="success-card" data-post-id="post-3">
      <p>
@@ -479,7 +448,10 @@
   <button id="scrollTopBtn" onclick="window.scrollTo({ top: 0, behavior: 'smooth' })">
    Top
   </button>
-  <script src="script.js">
+ <!-- Firebase Scripts -->
+<script src="https://www.gstatic.com/firebasejs/12.0.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/12.0.0/firebase-database.js"></script>
+<script src="script.js"></script>
   </script>
  </body>
 </html>

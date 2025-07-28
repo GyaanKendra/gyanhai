@@ -297,7 +297,8 @@
 
 .reaction {
   display: inline-flex;
-  align-items: center;
+  align-items: center;     /* ✅ Important */
+  vertical-align: middle;  /* ✅ Important */
   gap: 5px;
   cursor: pointer;
   font-size: 1.5rem;
@@ -317,6 +318,7 @@
   color: #ff1744;
   animation: bounce 0.3s ease;
 }
+
 
 @keyframes bounce {
   0%   { transform: scale(1); }

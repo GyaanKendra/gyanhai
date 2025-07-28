@@ -290,11 +290,9 @@
 /* Reaction Bar */
 .reaction-bar {
   display: flex;
+  flex-direction: row; /* Force horizontal */
   justify-content: center;
   gap: 25px;
-  margin-top: auto;
-  padding-top: 10px;
-  border-top: 1px solid #eee;
 }
 
 .reaction {

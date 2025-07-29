@@ -1,5 +1,4 @@
      const words = ["Shekhawati University", "Rajasthan University", "Matsya University", "Admit Card", "Result", "Admission Form"];
-   const words = ["Your Success", "Learning Hub", "Future Growth"];
 let wordIndex = 0;
 let charIndex = 0;
 const typewriter = document.getElementById('typewriter');

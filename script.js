@@ -1,24 +1,33 @@
      const words = ["Shekhawati University", "Rajasthan University", "Matsya University", "Admit Card", "Result", "Admission Form"];
-    let i = 0, j = 0, isDeleting = false;
+   const words = ["Your Success", "Learning Hub", "Future Growth"];
+let wordIndex = 0;
+let charIndex = 0;
+const typewriter = document.getElementById('typewriter');
 
-    function type() {
-      const current = words[i];
-      let display = current.substring(0, j);
-      document.getElementById("typewriter").textContent = display;
+function type() {
+  if (!typewriter) return; // Safety check
 
-      if (!isDeleting && j < current.length) {
-        j++;
-        setTimeout(type, 100);
-      } else if (isDeleting && j > 0) {
-        j--;
-        setTimeout(type, 50);
-      } else {
-        isDeleting = !isDeleting;
-        if (!isDeleting) i = (i + 1) % words.length;
-        setTimeout(type, 1000);
-      }
-    }
-    type();
+  if (charIndex < words[wordIndex].length) {
+    typewriter.textContent += words[wordIndex].charAt(charIndex);
+    charIndex++;
+    setTimeout(type, 100);
+  } else {
+    setTimeout(erase, 1500);
+  }
+}
+
+function erase() {
+  if (charIndex > 0) {
+    typewriter.textContent = words[wordIndex].substring(0, charIndex - 1);
+    charIndex--;
+    setTimeout(erase, 50);
+  } else {
+    wordIndex = (wordIndex + 1) % words.length;
+    setTimeout(type, 300);
+  }
+}
+
+document.addEventListener("DOMContentLoaded", type);
 
 
                      

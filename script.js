@@ -1,4 +1,4 @@
-    const words = ["Shekhawati University", "Rajasthan University", "Matsya University", "Admit Card", "Result", "Admission Form"];
+     const words = ["Shekhawati University", "Rajasthan University", "Matsya University", "Admit Card", "Result", "Admission Form"];
     let i = 0, j = 0, isDeleting = false;
 
     function type() {
@@ -206,7 +206,7 @@ startAutoSlide();
     console.log(`Saving data to Google Sheets: ${input}`);
   }
     
-     // Navbar toggle for mobile
+    // Navbar toggle for mobile
     const btnMenu = document.getElementById('btn-menu');
     const navList = document.getElementById('nav-list');
     btnMenu.addEventListener('click', () => {
@@ -224,70 +224,6 @@ startAutoSlide();
         });
       });
     }
-
-
-// Success Story
-let pageURL = "https://gyaankendra.github.io/gyanhai/";
-
-  // ✅ View count localStorage
-  document.querySelectorAll('.success-card').forEach(card=>{
-    let id = card.dataset.postId;
-    let key = "views_"+id;
-    let current = localStorage.getItem(key) || 0;
-    current++;
-    localStorage.setItem(key,current);
-    card.querySelector('.view-count').textContent = current;
-  });
-
-  // ✅ Reaction Toggle (max 2 active)
-  document.querySelectorAll('.reaction').forEach(btn=>{
-    btn.addEventListener('click',()=>{
-      if(btn.classList.contains('share-icon')) return;
-      let card = btn.closest('.success-card');
-      let active = card.querySelectorAll('.reaction.active');
-      if(btn.classList.contains('active')){
-        btn.classList.remove('active');
-        let c = btn.querySelector('.count');
-        c.textContent = parseInt(c.textContent)-1;
-      } else {
-        if(active.length>=2){
-          active[0].classList.remove('active');
-          let c = active[0].querySelector('.count');
-          c.textContent = parseInt(c.textContent)-1;
-        }
-        btn.classList.add('active');
-        let c = btn.querySelector('.count');
-        c.textContent = parseInt(c.textContent)+1;
-      }
-    });
-  });
-
-  // ✅ Share modal
-  function openShare(){document.getElementById('shareModal').style.display='flex';}
-  document.getElementById('shareModal').addEventListener('click',e=>{
-    if(e.target.id==='shareModal') e.target.style.display='none';
-  });
-
-  function copyLink(){
-    navigator.clipboard.writeText(pageURL);
-    alert("Link Copied!");
-  }
-
-  function shareTo(platform){
-    let encoded = encodeURIComponent(pageURL);
-    if(platform==='whatsapp'){
-      window.location.href = `whatsapp://send?text=${encoded}`;
-      setTimeout(()=>{window.open(`https://wa.me/?text=${encoded}`,'_blank');},1500);
-    } else if(platform==='instagram'){
-      window.location.href = `instagram://share?text=${encoded}`;
-      setTimeout(()=>{window.open(`https://www.instagram.com/?url=${encoded}`,'_blank');},1500);
-    } else if(platform==='telegram'){
-      window.location.href = `tg://msg_url?url=${encoded}`;
-      setTimeout(()=>{window.open(`https://t.me/share/url?url=${encoded}`,'_blank');},1500);
-    }
-  }
-
-
 
 </script>
 

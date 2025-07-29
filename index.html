@@ -180,90 +180,88 @@
 
 
 <!-- ✅ Student Success Stories Section -->
+
 <div class="success-stories">
   <h2>🎓 Student Success Stories</h2>
   <div class="success-box">
-    <div class="success-card" data-post="post1">
+
+    <!-- Card 1 -->
+    <div class="success-card" data-post-id="1">
       <p>"Main PDSU ki website se judkar apni journey ko ek nayi disha mein le gaya hoon..."</p>
-      <span>- Ravi Sharma</span>
-      <div class="success-card" data-post-id="post-3">
-     <p>
-      "PDSU ki website ne mujhe wo support diya, jo kabhi socha bhi nahi tha. Har struggle ko easy bana diya yahan ki community aur guidance ne..."
-     </p>
-     <span style="float: right;">
-      Ankit Joshi
-     </span>
-     <div class="reaction-bar">
-      <span class="reaction" data-type="like">       ❤️     
-       <span class="count">        0       </span>
-      </span>
-      <span class="reaction" data-type="thumb">       👍    
-       <span class="count">        0       </span>
-      </span>
-      <span class="reaction" data-type="smile">       😄
-       <span class="count">        0       </span>
-      </span>
-      <span class="reaction" data-type="dislike">       👎
-       <span class="count">        0       </span>
-      </span>
-     </div>
+      <span class="name">- Ravi Sharma</span>
+
+      <div class="views">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 5c-7 0-11 7-11 7s4 7 11 7 11-7 11-7-4-7-11-7zm0 11a4 4 0 110-8 4 4 0 010 8z"/></svg>
+        <span class="view-count">0</span> views
+      </div>
+
+      <div class="reaction-bar">
+        <span class="reaction" data-type="like">❤️ <span class="count">0</span></span>
+        <span class="reaction" data-type="thumb">👍 <span class="count">0</span></span>
+        <span class="reaction" data-type="dislike">👎 <span class="count">0</span></span>
+        <span class="reaction share-icon" onclick="openShare()">
+          <img src="https://cdn-icons-png.flaticon.com/512/739/739257.png" alt="Share">
+        </span>
+      </div>
     </div>
 
-    <div class="success-card" data-post="post2">
-      <p>"PDSU ki website ne meri life mein bohot positive change laaye hain..."</p>
-      <span>- Neha Verma</span>
-     <div class="success-card" data-post-id="post-3">
-     <p>
-      "PDSU ki website ne mujhe wo support diya, jo kabhi socha bhi nahi tha. Har struggle ko easy bana diya yahan ki community aur guidance ne..."
-     </p>
-     <span style="float: right;">
-      Ankit Joshi
-     </span>
-     <div class="reaction-bar">
-      <span class="reaction" data-type="like">       ❤️     
-       <span class="count">        0       </span>
-      </span>
-      <span class="reaction" data-type="thumb">       👍    
-       <span class="count">        0       </span>
-      </span>
-      <span class="reaction" data-type="smile">       😄
-       <span class="count">        0       </span>
-      </span>
-      <span class="reaction" data-type="dislike">       👎
-       <span class="count">        0       </span>
-      </span>
-     </div>
+    <!-- Card 2 -->
+    <div class="success-card" data-post-id="2">
+      <p>"Website ki wajah se mujhe apne exams ke liye best material mila, aur confidence bhi!"</p>
+      <span class="name">- Anjali Verma</span>
+
+      <div class="views">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 5c-7 0-11 7-11 7s4 7 11 7 11-7 11-7-4-7-11-7zm0 11a4 4 0 110-8 4 4 0 010 8z"/></svg>
+        <span class="view-count">0</span> views
+      </div>
+
+      <div class="reaction-bar">
+        <span class="reaction" data-type="like">❤️ <span class="count">0</span></span>
+        <span class="reaction" data-type="thumb">👍 <span class="count">0</span></span>
+        <span class="reaction" data-type="dislike">👎 <span class="count">0</span></span>
+        <span class="reaction share-icon" onclick="openShare()">
+          <img src="https://cdn-icons-png.flaticon.com/512/739/739257.png" alt="Share">
+        </span>
+      </div>
     </div>
+
+    <!-- Card 3 -->
+    <div class="success-card" data-post-id="3">
+      <p>"Itne easy aur premium design ke sath padhai karna ek alag hi maza hai!"</p>
+      <span class="name">- Kunal Singh</span>
+
+      <div class="views">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 5c-7 0-11 7-11 7s4 7 11 7 11-7 11-7-4-7-11-7zm0 11a4 4 0 110-8 4 4 0 010 8z"/></svg>
+        <span class="view-count">0</span> views
+      </div>
+
+      <div class="reaction-bar">
+        <span class="reaction" data-type="like">❤️ <span class="count">0</span></span>
+        <span class="reaction" data-type="thumb">👍 <span class="count">0</span></span>
+        <span class="reaction" data-type="dislike">👎 <span class="count">0</span></span>
+        <span class="reaction share-icon" onclick="openShare()">
+          <img src="https://cdn-icons-png.flaticon.com/512/739/739257.png" alt="Share">
+        </span>
+      </div>
+    </div>
+
   </div>
 </div>
 
+<!-- Share Modal -->
+<div class="share-modal" id="shareModal">
+  <div class="share-box">
+    <h3>Share this Story</h3>
+    <div class="share-icons">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" onclick="shareTo('instagram')">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" onclick="shareTo('whatsapp')">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/8/82/Telegram_logo.svg" onclick="shareTo('telegram')">
+    </div>
+    <div class="copy-link" onclick="copyLink()">📋 Copy Link</div>
+  </div>
+</div>
 
   
-    <!-- CARD 3 -->
-    <div class="success-card" data-post-id="post-3">
-     <p>
-      "PDSU ki website ne mujhe wo support diya, jo kabhi socha bhi nahi tha. Har struggle ko easy bana diya yahan ki community aur guidance ne..."
-     </p>
-     <span style="float: right;">
-      Ankit Joshi
-     </span>
-     <div class="reaction-bar">
-      <span class="reaction" data-type="like">       ❤️     
-       <span class="count">        0       </span>
-      </span>
-      <span class="reaction" data-type="thumb">       👍    
-       <span class="count">        0       </span>
-      </span>
-      <span class="reaction" data-type="smile">       😄
-       <span class="count">        0       </span>
-      </span>
-      <span class="reaction" data-type="dislike">       👎
-       <span class="count">        0       </span>
-      </span>
-     </div>
-    </div>
-   </div>
-  </div>
   <!-- Article Section -->
   <section class="articles">
    <div class="container">

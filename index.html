@@ -9,81 +9,7 @@
    Rajasthan University, Shekhawati &amp; Matsya Exam Form, Admit Card, Result - Gyaankendra
   </title>
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
-  <link href="style.css" rel="stylesheet"/>
-<style>
-     {font-family: Arial, sans-serif; margin:0; background:#f4f6f9;}
-
-    .success-stories {background:#d4eaff; padding:50px 15px;}
-    .success-stories h2 {text-align:center; font-size:2rem; margin-bottom:25px; color:#222;}
-
-    .success-box {display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:20px; max-width:1000px; margin:0 auto;}
-
-    .success-card {
-      background:#fff;
-      padding:18px;
-      border-radius:12px;
-      box-shadow:0 2px 8px rgba(0,0,0,0.1);
-      display:flex;
-      flex-direction:column;
-      justify-content:space-between;
-      position:relative;
-    }
-    .success-card p {font-size:0.95rem; color:#555; text-align:justify;}
-    .success-card span.name {font-size:0.85rem; color:#20a4f3; font-weight:600; margin-top:10px; display:block; text-align:right;}
-
-    /* Views */
-    .views {display:flex; align-items:center; gap:4px; font-size:0.8rem; color:#777; margin-top:6px;}
-    .views svg {width:16px; height:16px; opacity:0.4;}
-
-    /* Reaction Bar */
-    .reaction-bar {
-      display:flex; justify-content:space-between; align-items:center;
-      margin-top:10px; padding-top:8px; border-top:1px solid #eee;
-    }
-    .reaction {
-      display:inline-flex; align-items:center; gap:3px; cursor:pointer;
-      font-size:1.3rem; color:#888; transition:transform 0.2s ease, color 0.2s ease; user-select:none;
-    }
-    .reaction.active {color:#ff1744; animation:bounce 0.3s ease;}
-    .reaction .count {font-size:0.85rem; color:#333; font-weight:500;}
-    @keyframes bounce {0%{transform:scale(1);}30%{transform:scale(1.3);}60%{transform:scale(0.9);}100%{transform:scale(1);}}
-
-    /* Share Icon (Outline) */
-    .share-icon svg {
-      width:24px;
-      height:24px;
-      cursor:pointer;
-      transition:transform 0.2s ease;
-    }
-    .share-icon svg:hover {
-      transform:scale(1.2);
-      stroke:#0a66c2; /* hover pe dark blue */
-    }
-
-    /* Share Modal */
-    .share-modal {
-      position:fixed; top:0; left:0; width:100%; height:100%;
-      background:rgba(0,0,0,0.5); backdrop-filter:blur(8px);
-      display:none; justify-content:center; align-items:center; z-index:999;
-    }
-    .share-box {
-      background:linear-gradient(135deg,#833ab4,#fd1d1d,#fcb045);
-      padding:20px; border-radius:18px; color:#fff; text-align:center;
-      width:280px; animation:pop 0.3s ease;
-    }
-    @keyframes pop {0%{transform:scale(0.8);opacity:0;}100%{transform:scale(1);opacity:1);}}
-    .share-icons {display:flex; justify-content:space-around; margin-top:12px;}
-    .share-icons img {
-      width:42px; height:42px; background:#fff; border-radius:50%; padding:5px;
-      cursor:pointer; transition:transform 0.2s ease;
-    }
-    .share-icons img:hover {transform:scale(1.2);}
-    .copy-link {
-      background:#fff; color:#333; margin-top:12px; padding:6px 10px;
-      border-radius:8px; cursor:pointer; font-size:0.85rem;
-    }
-  </style>
-  
+  <link href="style.css" rel="stylesheet"/>  
  </head>
  <body>
   <header>
@@ -162,13 +88,11 @@
     </ul>
    </nav>
   </header>
-  <div class="hero">
-   <h1>
-    Knowledge Hub
-   </h1>
-   <div id="typewriter">
-   </div>
+   <div class="hero">
+    <h1>Knowledge Hub</h1>
+    <div id="typewriter"></div>
   </div>
+
   <div class="news-ticker">
    <span>
     🎓 Admissions now open for 2025 | Apply before the deadline | Visit Gyaankendra for latest updates!
@@ -253,96 +177,10 @@
   </div>
 
 
-<!-- ✅ Student Success Stories Section -->
+<!-- Student Success Stories Section -->
 
-<div class="success-stories">
-  <h2>🎓 Student Success Stories</h2>
-  <div class="success-box">
 
-    <!-- Card 1 -->
-    <div class="success-card" data-post-id="1">
-      <p>"Main PDSU ki website se judkar apni journey ko ek nayi disha mein le gaya hoon..."</p>
-      <span class="name">- Ravi Sharma</span>
-
-      <div class="views">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 5c-7 0-11 7-11 7s4 7 11 7 11-7 11-7-4-7-11-7zm0 11a4 4 0 110-8 4 4 0 010 8z"/></svg>
-        <span class="view-count">0</span> views
-      </div>
-
-      <div class="reaction-bar">
-        <span class="reaction" data-type="like">❤️ <span class="count">0</span></span>
-        <span class="reaction" data-type="thumb">👍 <span class="count">0</span></span>
-        <span class="reaction" data-type="dislike">👎 <span class="count">0</span></span>
-        <span class="reaction share-icon" onclick="openShare()">
-          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-            <path d="M22 5.8c-.8.3-1.6.5-2.5.6a4.2 4.2 0 001.8-2.3c-.8.5-1.8.8-2.8 1a4.2 4.2 0 00-7.2 3.8A12 12 0 013 4.7a4.2 4.2 0 001.3 5.6c-.7 0-1.3-.2-1.9-.5v.1c0 2 1.4 3.7 3.3 4.1-.3.1-.7.1-1 .1-.3 0-.5 0-.8-.1.5 1.7 2.1 3 4 3a8.5 8.5 0 01-5.2 1.8c-.3 0-.7 0-1-.1A12 12 0 008.3 21c7.5 0 11.7-6.2 11.7-11.7v-.5c.8-.5 1.5-1.2 2-2z" 
-              fill="none" stroke="#1DA1F2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-          </svg>
-        </span>
-      </div>
-    </div>
-
-    <!-- Card 2 -->
-    <div class="success-card" data-post-id="2">
-      <p>"Website ki wajah se mujhe apne exams ke liye best material mila, aur confidence bhi!"</p>
-      <span class="name">- Anjali Verma</span>
-
-      <div class="views">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 5c-7 0-11 7-11 7s4 7 11 7 11-7 11-7-4-7-11-7zm0 11a4 4 0 110-8 4 4 0 010 8z"/></svg>
-        <span class="view-count">0</span> views
-      </div>
-
-      <div class="reaction-bar">
-        <span class="reaction" data-type="like">❤️ <span class="count">0</span></span>
-        <span class="reaction" data-type="thumb">👍 <span class="count">0</span></span>
-        <span class="reaction" data-type="dislike">👎 <span class="count">0</span></span>
-        <span class="reaction share-icon" onclick="openShare()">
-          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-            <path d="M22 5.8c-.8.3-1.6.5-2.5.6a4.2 4.2 0 001.8-2.3c-.8.5-1.8.8-2.8 1a4.2 4.2 0 00-7.2 3.8A12 12 0 013 4.7a4.2 4.2 0 001.3 5.6c-.7 0-1.3-.2-1.9-.5v.1c0 2 1.4 3.7 3.3 4.1-.3.1-.7.1-1 .1-.3 0-.5 0-.8-.1.5 1.7 2.1 3 4 3a8.5 8.5 0 01-5.2 1.8c-.3 0-.7 0-1-.1A12 12 0 008.3 21c7.5 0 11.7-6.2 11.7-11.7v-.5c.8-.5 1.5-1.2 2-2z" 
-              fill="none" stroke="#1DA1F2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-          </svg>
-        </span>
-      </div>
-    </div>
-
-    <!-- Card 3 -->
-    <div class="success-card" data-post-id="3">
-      <p>"Itne easy aur premium design ke sath padhai karna ek alag hi maza hai!"</p>
-      <span class="name">- Kunal Singh</span>
-
-      <div class="views">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 5c-7 0-11 7-11 7s4 7 11 7 11-7 11-7-4-7-11-7zm0 11a4 4 0 110-8 4 4 0 010 8z"/></svg>
-        <span class="view-count">0</span> views
-      </div>
-
-      <div class="reaction-bar">
-        <span class="reaction" data-type="like">❤️ <span class="count">0</span></span>
-        <span class="reaction" data-type="thumb">👍 <span class="count">0</span></span>
-        <span class="reaction" data-type="dislike">👎 <span class="count">0</span></span>
-        <span class="reaction share-icon" onclick="openShare()">
-          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-            <path d="M22 5.8c-.8.3-1.6.5-2.5.6a4.2 4.2 0 001.8-2.3c-.8.5-1.8.8-2.8 1a4.2 4.2 0 00-7.2 3.8A12 12 0 013 4.7a4.2 4.2 0 001.3 5.6c-.7 0-1.3-.2-1.9-.5v.1c0 2 1.4 3.7 3.3 4.1-.3.1-.7.1-1 .1-.3 0-.5 0-.8-.1.5 1.7 2.1 3 4 3a8.5 8.5 0 01-5.2 1.8c-.3 0-.7 0-1-.1A12 12 0 008.3 21c7.5 0 11.7-6.2 11.7-11.7v-.5c.8-.5 1.5-1.2 2-2z" 
-              fill="none" stroke="#1DA1F2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-          </svg>
-        </span>
-      </div>
-    </div>
-
-  </div>
-</div>
-
-<!-- Share Modal -->
-<div class="share-modal" id="shareModal">
-  <div class="share-box">
-    <h3>Share this Story</h3>
-    <div class="share-icons">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" onclick="shareTo('instagram')">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" onclick="shareTo('whatsapp')">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/8/82/Telegram_logo.svg" onclick="shareTo('telegram')">
-    </div>
-    <div class="copy-link" onclick="copyLink()">📋 Copy Link</div>
-  </div>
-</div>
+  
   
   <!-- Article Section -->
   <section class="articles">

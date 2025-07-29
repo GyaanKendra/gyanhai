@@ -263,72 +263,8 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
 
-// ✅ Firebase Config
-const firebaseConfig = {
-  apiKey: "AIzaSyBXYryH09Yai51dvpYN0QSX8QQhPjVn-G8",
-  authDomain: "emogreaction.firebaseapp.com",
-  databaseURL: "https://console.firebase.google.com/project/emogreaction/database/emogreaction-default-rtdb/data/~2F?fb_gclid=Cj0KCQjwnJfEBhCzARIsAIMtfKLCt5WwmAhszVIZk-R3rr84Xu7PSi5ClUOe-Je-SRIcNms4rWjwB7EaAlMIEALw_wcB",
-  projectId: "your-project",
-  storageBucket: "your-project.appspot.com",
-  messagingSenderId: "SENDER_ID",
-  appId: "APP_ID"
-};
 
-// ✅ Firebase Init
-firebase.initializeApp(firebaseConfig);
-const db = firebase.database();
 
-// ✅ Reaction Logic
-document.querySelectorAll(".success-card").forEach(card => {
-  const postId = card.dataset.post;
-
-  card.querySelectorAll(".reaction").forEach(reaction => {
-    const type = reaction.dataset.type;
-    const countSpan = reaction.querySelector(".count");
-
-    // ✅ Load counts from Firebase (No bounce)
-    firebase.database().ref(`reactions/${postId}/${type}`).on("value", snapshot => {
-      if (snapshot.exists()) {
-        countSpan.textContent = snapshot.val();
-      }
-    });
-
-    // ✅ Click event with bounce effect
-    reaction.addEventListener("click", () => {
-      const current = parseInt(countSpan.textContent) || 0;
-      const newCount = current + 1;
-      firebase.database().ref(`reactions/${postId}`).update({ [type]: newCount });
-
-      // Bounce only when user clicks
-      reaction.classList.add("active");
-      setTimeout(() => reaction.classList.remove("active"), 300);
-    });
-  });
-});
-
-<script type="module">
-  // Import the functions you need from the SDKs you need
-  import { initializeApp } from "https://www.gstatic.com/firebasejs/12.0.0/firebase-app.js";
-  import { getAnalytics } from "https://www.gstatic.com/firebasejs/12.0.0/firebase-analytics.js";
-  // TODO: Add SDKs for Firebase products that you want to use
-  // https://firebase.google.com/docs/web/setup#available-libraries
-
-  // Your web app's Firebase configuration
-  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
-  const firebaseConfig = {
-    apiKey: "AIzaSyBXYryH09Yai51dvpYN0QSX8QQhPjVn-G8",
-    authDomain: "emogreaction.firebaseapp.com",
-    databaseURL: "https://emogreaction-default-rtdb.asia-southeast1.firebasedatabase.app",
-    projectId: "emogreaction",
-    storageBucket: "emogreaction.firebasestorage.app",
-    messagingSenderId: "548650679508",
-    appId: "1:548650679508:web:21736c9b3f882dc13c4f41",
-    measurementId: "G-98FVCFR4XD"
-  };
-
-  // Initialize Firebase
-  const app = initializeApp(firebaseConfig);
-  const analytics = getAnalytics(app);
 </script>
 
 

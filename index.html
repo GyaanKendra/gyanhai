@@ -9,6 +9,8 @@
    Rajasthan University, Shekhawati &amp; Matsya Exam Form, Admit Card, Result - Gyaankendra
   </title>
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
+    <!-- ✅ Elegant Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Inter:wght@400;500&display=swap" rel="stylesheet">
   <link href="style.css" rel="stylesheet"/>  
 <style>
     * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -573,14 +575,14 @@
   
 
   /* Student View Card */
-body {font-family: Arial, sans-serif; margin:0; background:#f4f6f9;}
+    body {font-family: Arial, sans-serif; margin:0; background:#f4f6f9;}
 
-    .success-stories {background:#d4eaff; padding:50px 15px;}
-    .success-stories h2 {text-align:center; font-size:2rem; margin-bottom:25px; color:#222;}
+    .pdsu-stories {background:#d4eaff; padding:50px 15px;}
+    .pdsu-stories h2 {text-align:center; font-size:2rem; margin-bottom:25px; color:#222;}
 
-    .success-box {display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:20px; max-width:1000px; margin:0 auto;}
+    .pdsu-box {display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:20px; max-width:1000px; margin:0 auto;}
 
-    .success-card {
+    .pdsu-card {
       background:#fff;
       padding:18px;
       border-radius:12px;
@@ -590,51 +592,203 @@ body {font-family: Arial, sans-serif; margin:0; background:#f4f6f9;}
       justify-content:space-between;
       position:relative;
     }
-    .success-card p {font-size:0.95rem; color:#555; text-align:justify;}
-    .success-card span.name {font-size:0.85rem; color:#20a4f3; font-weight:600; margin-top:10px; display:block; text-align:right;}
+    .pdsu-card p {font-size:0.95rem; color:#555; text-align:justify;}
+    .pdsu-card span.name {font-size:0.85rem; color:#20a4f3; font-weight:600; margin-top:10px; display:block; text-align:right;}
 
-    /* Views */
-    .views {display:flex; align-items:center; gap:4px; font-size:0.8rem; color:#777; margin-top:6px;}
-    .views svg {width:16px; height:16px; opacity:0.4;}
+    /* ✅ Views */
+    .pdsu-views {display:flex; align-items:center; gap:4px; font-size:0.8rem; color:#777; margin-top:6px;}
+    .pdsu-views svg {width:16px; height:16px; opacity:0.4;}
 
-    /* Reaction Bar */
-    .reaction-bar {
+    /* ✅ Reaction Bar */
+    .pdsu-reaction-bar {
       display:flex; justify-content:space-between; align-items:center;
       margin-top:10px; padding-top:8px; border-top:1px solid #eee;
     }
-    .reaction {
+    .pdsu-reaction {
       display:inline-flex; align-items:center; gap:3px; cursor:pointer;
       font-size:1.3rem; color:#888; transition:transform 0.2s ease, color 0.2s ease; user-select:none;
     }
-    .reaction.active {color:#ff1744; animation:bounce 0.3s ease;}
-    .reaction .count {font-size:0.85rem; color:#333; font-weight:500;}
+    .pdsu-reaction.pdsu-active {color:#ff1744; animation:bounce 0.3s ease;}
+    .pdsu-reaction .count {font-size:0.85rem; color:#333; font-weight:500;}
     @keyframes bounce {0%{transform:scale(1);}30%{transform:scale(1.3);}60%{transform:scale(0.9);}100%{transform:scale(1);}}
 
-    /* Share Modal */
-    .share-modal {
-      position:fixed; top:0; left:0; width:100%; height:100%;
-      background:rgba(0,0,0,0.5); backdrop-filter:blur(8px);
-      display:none; justify-content:center; align-items:center; z-index:999;
-    }
-    .share-box {
-      background:linear-gradient(135deg,#833ab4,#fd1d1d,#fcb045);
-      padding:20px; border-radius:18px; color:#fff; text-align:center;
-      width:280px; animation:pop 0.3s ease;
-    }
+    /* ✅ Share Modal */
+    .share-modal {position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.5); backdrop-filter:blur(8px); display:none; justify-content:center; align-items:center; z-index:999;}
+    .share-box {background:linear-gradient(135deg,#833ab4,#fd1d1d,#fcb045); padding:20px; border-radius:18px; color:#fff; text-align:center; width:280px; animation:pop 0.3s ease;}
     @keyframes pop {0%{transform:scale(0.8);opacity:0;}100%{transform:scale(1);opacity:1);}}
     .share-icons {display:flex; justify-content:space-around; margin-top:12px;}
-    .share-icons img {
-      width:42px; height:42px; background:#fff; border-radius:50%; padding:5px;
-      cursor:pointer; transition:transform 0.2s ease;
-    }
+    .share-icons img {width:42px; height:42px; background:#fff; border-radius:50%; padding:5px; cursor:pointer; transition:transform 0.2s ease;}
     .share-icons img:hover {transform:scale(1.2);}
-    .copy-link {
-      background:#fff; color:#333; margin-top:12px; padding:6px 10px;
-      border-radius:8px; cursor:pointer; font-size:0.85rem;
+    .copy-link {background:#fff; color:#333; margin-top:12px; padding:6px 10px; border-radius:8px; cursor:pointer; font-size:0.85rem;}
+    .share-icon img {width:22px; height:22px;}
+
+
+ /* ✅ University news slider */
+ .uni-slider-wrapper * {
+      box-sizing: border-box;
     }
 
-    /* Instagram Share Icon */
-    .share-icon img {width:22px; height:22px;}
+    .uni-slider-wrapper {
+      font-family:'Inter', sans-serif;
+      color:#222;
+      background:#f4f7fb;
+      padding:20px 0;
+    }
+
+    /* ✅ Heading Section */
+    .uni-slider-heading{
+      text-align:center;
+      margin:30px 0 25px;
+    }
+
+    /* ✅ Creative Premium Gradient Heading */
+    .uni-slider-heading h2{
+      font-family:'Playfair Display', serif;
+      font-size:2.4rem;
+      font-weight:700;
+      background:linear-gradient(90deg,#2563eb,#7c3aed);
+      -webkit-background-clip:text;
+      -webkit-text-fill-color:transparent;
+      position:relative;
+      display:inline-block;
+      padding-bottom:12px;
+    }
+
+    /* ✅ Inside-Outside Amazing Underline */
+    .uni-slider-heading h2::after{
+      content:"";
+      position:absolute;
+      bottom:0;
+      left:50%;
+      transform:translateX(-50%);
+      width:110%;
+      height:4px;
+      background:linear-gradient(to right,#2563eb,#7c3aed);
+      border-radius:3px;
+      box-shadow: 0 0 6px rgba(124,58,237,0.5), 
+                  inset 0 0 6px rgba(37,99,235,0.4);
+    }
+
+    .uni-slider-heading p{
+      font-family:'Inter', sans-serif;
+      font-size:1rem;
+      color:#475569;
+      margin-top:12px;
+    }
+
+    .uni-slider-container{
+      width:92%;
+      max-width:1350px;
+      margin:0 auto 50px;
+      overflow:hidden;
+      position:relative;
+    }
+
+    .uni-slider{
+      display:flex;
+      transition: transform 0.6s ease;
+      padding:10px;
+    }
+
+    /* ✅ Wider Cards */
+    .uni-card{
+      flex:0 0 31%;
+      background:#fff;
+      margin:12px;
+      border-radius:12px;
+      padding:24px;
+      box-shadow:0 3px 12px rgba(0,0,0,0.06);
+      cursor:pointer;
+      transition:transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .uni-card:hover{
+      transform:translateY(-6px);
+      box-shadow:0 10px 22px rgba(0,0,0,0.12);
+    }
+
+    .uni-card h3{
+      font-size:1.15rem;
+      margin-bottom:6px;
+      color:#1f2937;
+    }
+    .uni-card p{
+      font-size:0.95rem;
+      color:#4b5563;
+      line-height:1.45;
+    }
+    .uni-card a{
+      display:inline-block;
+      margin-top:12px;
+      padding:7px 14px;
+      background:#2563eb;
+      color:#fff;
+      border-radius:6px;
+      text-decoration:none;
+      font-size:0.85rem;
+      transition:background 0.3s ease;
+    }
+    .uni-card a:hover{background:#1e40af;}
+
+    /* ✅ Elegant Small Dash Indicators */
+    .uni-dots-patti{
+      margin-top:18px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+    }
+    .uni-dots span{
+      display:inline-block;
+      width:20px;
+      height:4px;
+      background:#cbd5e1;
+      margin:0 3px;
+      border-radius:3px;
+      transition:all 0.3s ease;
+      cursor:pointer;
+    }
+    .uni-dots span:hover{background:#94a3b8;}
+    .uni-dots .active{
+      background:#2563eb;
+      width:28px;
+      box-shadow:0 0 6px rgba(37,99,235,0.4);
+    }
+
+    /* ✅ Premium Modern Arrows */
+    .uni-arrow{
+      position:absolute;
+      top:42%;
+      background:rgba(255,255,255,0.2);
+      backdrop-filter: blur(8px);
+      border:none;
+      font-size:1.7rem;
+      width:50px;
+      height:50px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      cursor:pointer;
+      border-radius:50%;
+      box-shadow:0 4px 14px rgba(0,0,0,0.2);
+      transition:all 0.3s ease;
+      z-index:5;
+      color:#2563eb;
+    }
+    .uni-arrow:hover{
+      background:rgba(255,255,255,0.7);
+      transform:scale(1.12);
+      box-shadow:0 6px 18px rgba(0,0,0,0.3);
+    }
+    .uni-arrow.prev{left:15px;}
+    .uni-arrow.next{right:15px;}
+
+    /* Responsive */
+    @media(max-width:768px){
+      .uni-card{flex:0 0 80%;}
+    }
+    @media(max-width:480px){
+      .uni-card{flex:0 0 100%; margin:8px;}
+      .uni-slider-heading h2{font-size:1.7rem;}
+    }
 </style>
  </head>
  <body>
@@ -804,87 +958,80 @@ body {font-family: Arial, sans-serif; margin:0; background:#f4f6f9;}
 
 
 <!-- Student Success Stories Section -->
+<!-- ✅ Student Success Stories -->
+  <div class="pdsu-stories">
+    <h2>🎓 Student Success Stories</h2>
+    <div class="pdsu-box">
 
-<div class="success-stories">
-  <h2>?? Student Success Stories</h2>
-  <div class="success-box">
-
-    <!-- Card 1 -->
-    <div class="success-card" data-post-id="1">
-      <p>"Main PDSU ki website se judkar apni journey ko ek nayi disha mein le gaya hoon..."</p>
-      <span class="name">- Ravi Sharma</span>
-
-      <div class="views">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 5c-7 0-11 7-11 7s4 7 11 7 11-7 11-7-4-7-11-7zm0 11a4 4 0 110-8 4 4 0 010 8z"/></svg>
-        <span class="view-count">0</span> views
+      <!-- ✅ Card 1 -->
+      <div class="pdsu-card" data-post-id="1">
+        <p>"ek nayi disha mein le gaya hoon..."</p>
+        <span class="name">- Ravi Sharma</span>
+        <div class="pdsu-views">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 5c-7 0-11 7-11 7s4 7 11 7 11-7 11-7-4-7-11-7zm0 11a4 4 0 110-8 4 4 0 010 8z"/></svg>
+          <span class="pdsu-view-count">0</span> views
+        </div>
+        <div class="pdsu-reaction-bar">
+          <span class="pdsu-reaction" data-type="like">❤️ <span class="count">0</span></span>
+          <span class="pdsu-reaction" data-type="thumb">👍 <span class="count">0</span></span>
+          <span class="pdsu-reaction" data-type="dislike">👎 <span class="count">0</span></span>
+          <span class="pdsu-reaction share-icon" onclick="openShare()">
+            <img src="https://cdn-icons-png.flaticon.com/512/739/739257.png" alt="Share">
+          </span>
+        </div>
       </div>
 
-      <div class="reaction-bar">
-        <span class="reaction" data-type="like">❤️ <span class="count">0</span></span>
-        <span class="reaction" data-type="thumb">👍 <span class="count">0</span></span>
-        <span class="reaction" data-type="dislike">👎 <span class="count">0</span></span>
-        <span class="reaction share-icon" onclick="openShare()">
-          <img src="https://cdn-icons-png.flaticon.com/512/739/739257.png" alt="Share">
-        </span>
+      <!-- ✅ Card 2 -->
+      <div class="pdsu-card" data-post-id="2">
+        <p>"Thanks for team Rajasthan University"</p>
+        <span class="name">- Anjali Verma</span>
+        <div class="pdsu-views">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 5c-7 0-11 7-11 7s4 7 11 7 11-7 11-7-4-7-11-7zm0 11a4 4 0 110-8 4 4 0 010 8z"/></svg>
+          <span class="pdsu-view-count">0</span> views
+        </div>
+        <div class="pdsu-reaction-bar">
+          <span class="pdsu-reaction" data-type="like">❤️ <span class="count">0</span></span>
+          <span class="pdsu-reaction" data-type="thumb">👍 <span class="count">0</span></span>
+          <span class="pdsu-reaction" data-type="dislike">👎 <span class="count">0</span></span>
+          <span class="pdsu-reaction share-icon" onclick="openShare()">
+            <img src="https://cdn-icons-png.flaticon.com/512/739/739257.png" alt="Share">
+          </span>
+        </div>
       </div>
+
+      <!-- ✅ Card 3 -->
+      <div class="pdsu-card" data-post-id="3">
+        <p>"यूनिवर्सिटी का लूक एकदम प्रिमियम है आप जब यहां पढेगें आनन्‍द लेगे।. </p>
+        <span class="name">- Monika Roy</span>
+        <div class="pdsu-views">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 5c-7 0-11 7-11 7s4 7 11 7 11-7 11-7-4-7-11-7zm0 11a4 4 0 110-8 4 4 0 010 8z"/></svg>
+          <span class="pdsu-view-count">0</span> views
+        </div>
+        <div class="pdsu-reaction-bar">
+          <span class="pdsu-reaction" data-type="like">❤️ <span class="count">0</span></span>
+          <span class="pdsu-reaction" data-type="thumb">👍 <span class="count">0</span></span>
+          <span class="pdsu-reaction" data-type="dislike">👎 <span class="count">0</span></span>
+          <span class="pdsu-reaction share-icon" onclick="openShare()">
+            <img src="https://cdn-icons-png.flaticon.com/512/739/739257.png" alt="Share">
+          </span>
+        </div>
+      </div>
+
     </div>
-
-    <!-- Card 2 -->
-    <div class="success-card" data-post-id="2">
-      <p>"Website ki wajah se mujhe apne exams ke liye best material mila, aur confidence bhi!"</p>
-      <span class="name">- Anjali Verma</span>
-
-      <div class="views">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 5c-7 0-11 7-11 7s4 7 11 7 11-7 11-7-4-7-11-7zm0 11a4 4 0 110-8 4 4 0 010 8z"/></svg>
-        <span class="view-count">0</span> views
-      </div>
-
-      <div class="reaction-bar">
-       <span class="reaction" data-type="like">❤️ <span class="count">0</span></span>
-        <span class="reaction" data-type="thumb">👍 <span class="count">0</span></span>
-        <span class="reaction" data-type="dislike">👎 <span class="count">0</span></span>
-        <span class="reaction share-icon" onclick="openShare()">
-          <img src="https://cdn-icons-png.flaticon.com/512/739/739257.png" alt="Share">
-        </span>
-      </div>
-    </div>
-
-    <!-- Card 3 -->
-    <div class="success-card" data-post-id="3">
-      <p>"Itne easy aur premium design ke sath padhai karna ek alag hi maza hai!"</p>
-      <span class="name">- Kunal Singh</span>
-
-      <div class="views">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 5c-7 0-11 7-11 7s4 7 11 7 11-7 11-7-4-7-11-7zm0 11a4 4 0 110-8 4 4 0 010 8z"/></svg>
-        <span class="view-count">0</span> views
-      </div>
-
-      <div class="reaction-bar">
-     <span class="reaction" data-type="like">❤️ <span class="count">0</span></span>
-        <span class="reaction" data-type="thumb">👍 <span class="count">0</span></span>
-        <span class="reaction" data-type="dislike">👎 <span class="count">0</span></span>
-        <span class="reaction share-icon" onclick="openShare()">
-          <img src="https://cdn-icons-png.flaticon.com/512/739/739257.png" alt="Share">
-        </span>
-      </div>
-    </div>
-
   </div>
-</div>
 
-<!-- Share Modal -->
-<div class="share-modal" id="shareModal">
-  <div class="share-box">
-    <h3>Share this Story</h3>
-    <div class="share-icons">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" onclick="shareTo('instagram')">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" onclick="shareTo('whatsapp')">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/8/82/Telegram_logo.svg" onclick="shareTo('telegram')">
+  <!-- ✅ Share Modal -->
+  <div class="share-modal" id="shareModal">
+    <div class="share-box">
+      <h3>Share this Story</h3>
+      <div class="share-icons">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" onclick="shareTo('instagram')">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" onclick="shareTo('whatsapp')">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/8/82/Telegram_logo.svg" onclick="shareTo('telegram')">
+      </div>
+      <div class="copy-link" onclick="copyLink()"> Copy Link</div>
     </div>
-    <div class="copy-link" onclick="copyLink()"> Copy Link</div>
   </div>
-</div>
-  
   
   <!-- Article Section -->
   <section class="articles">
@@ -961,6 +1108,61 @@ body {font-family: Arial, sans-serif; margin:0; background:#f4f6f9;}
     </div>
    </div>
   </section>
+
+
+ 
+  <!-- University news slider -->
+<div class="uni-slider-wrapper">
+  <div class="uni-slider-heading">
+    <h2>Our University Programs</h2>
+    <p>Explore premium courses and learn from top instructors worldwide</p>
+  </div>
+
+  <div class="uni-slider-container">
+    <div class="uni-slider" id="uni-slider">
+      <div class="uni-card">
+        <h3>Computer Science</h3>
+        <p>Learn AI, programming, and modern technologies with top experts.</p>
+        <a href="#">View Details</a>
+      </div>
+      <div class="uni-card">
+        <h3>Business Management</h3>
+        <p>Master global leadership and management strategies.</p>
+        <a href="#">View Details</a>
+      </div>
+      <div class="uni-card">
+        <h3>Engineering</h3>
+        <p>Practical engineering courses with real-world applications.</p>
+        <a href="#">View Details</a>
+      </div>
+      <div class="uni-card">
+        <h3>History & Culture</h3>
+        <p>Explore world history and cultural heritage deeply.</p>
+        <a href="#">View Details</a>
+      </div>
+      <div class="uni-card">
+        <h3>Science & Tech</h3>
+        <p>Cutting-edge research and science programs.</p>
+        <a href="#">View Details</a>
+      </div>
+      <div class="uni-card">
+        <h3>Arts & Design</h3>
+        <p>Creative courses in art, design, and aesthetics.</p>
+        <a href="#">View Details</a>
+      </div>
+    </div>
+
+    <button class="uni-arrow prev" onclick="uniPrevSlide()">&#10094;</button>
+    <button class="uni-arrow next" onclick="uniNextSlide()">&#10095;</button>
+
+    <div class="uni-dots-patti">
+      <div class="uni-dots" id="uni-dots"></div>
+    </div>
+  </div>
+</div>
+
+
+ 
   <!-- susbcribe form -->
   <div class="subscription-form">
    <h2>
@@ -1088,6 +1290,9 @@ body {font-family: Arial, sans-serif; margin:0; background:#f4f6f9;}
   <button id="scrollTopBtn" onclick="window.scrollTo({ top: 0, behavior: 'smooth' })">
    Top
   </button>
+
+<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"></script>
 
 <script>
 
@@ -1328,66 +1533,169 @@ startAutoSlide();
 
 
 
-let pageURL = "https://gyaankendra.github.io/gyanhai/";
 
-  // ? View count localStorage
-  document.querySelectorAll('.success-card').forEach(card=>{
-    let id = card.dataset.postId;
-    let key = "views_"+id;
-    let current = localStorage.getItem(key) || 0;
-    current++;
-    localStorage.setItem(key,current);
-    card.querySelector('.view-count').textContent = current;
-  });
+let pageURL = window.location.href;
 
-  // ? Reaction Toggle (max 2 active)
-  document.querySelectorAll('.reaction').forEach(btn=>{
-    btn.addEventListener('click',()=>{
-      if(btn.classList.contains('share-icon')) return;
-      let card = btn.closest('.success-card');
-      let active = card.querySelectorAll('.reaction.active');
-      if(btn.classList.contains('active')){
-        btn.classList.remove('active');
-        let c = btn.querySelector('.count');
-        c.textContent = parseInt(c.textContent)-1;
-      } else {
-        if(active.length>=2){
-          active[0].classList.remove('active');
-          let c = active[0].querySelector('.count');
-          c.textContent = parseInt(c.textContent)-1;
+
+    // ✅ Firebase Config
+    const firebaseConfig = {
+      apiKey: "AIzaSyDnydPhUmns376_QXo7CInsSWL7kXO8chU",
+      authDomain: "reactionapp-25924.firebaseapp.com",
+      databaseURL: "https://reactionapp-25924-default-rtdb.asia-southeast1.firebasedatabase.app",
+      projectId: "reactionapp-25924",
+      storageBucket: "reactionapp-25924.firebasestorage.app",
+      messagingSenderId: "1048361753014",
+      appId: "1:1048361753014:web:14015b761a9481ec460917"
+    };
+    firebase.initializeApp(firebaseConfig);
+    const db = firebase.database();
+
+    // ✅ Unique device id
+    const deviceID = localStorage.getItem('pdsu_device') || 'dev_' + Math.random().toString(36).substr(2,9);
+    localStorage.setItem('pdsu_device', deviceID);
+
+    // ✅ Main Logic with Reset on <p> Change
+    document.querySelectorAll('.pdsu-card').forEach(card=>{
+      let id = card.dataset.postId;
+      let text = card.querySelector('p').innerText;
+
+      // 🔄 Check if text changed → reset
+      db.ref('posts/'+id+'/text').once('value',snap=>{
+        let oldText = snap.val();
+        if(oldText !== text){
+          db.ref('posts/'+id).set({
+            text: text,
+            views: 0,
+            reactions: { like: 0, thumb: 0, dislike: 0 }
+          });
+
+          Object.keys(localStorage).forEach(key=>{
+            if(key.startsWith(`pdsu_react_${id}_`)){
+              localStorage.removeItem(key);
+            }
+          });
+          sessionStorage.removeItem("viewed_"+id);
         }
-        btn.classList.add('active');
-        let c = btn.querySelector('.count');
-        c.textContent = parseInt(c.textContent)+1;
+      });
+
+      // ✅ Views Listener
+      db.ref('posts/'+id+'/views').on('value',snap=>{
+        card.querySelector('.pdsu-view-count').textContent = snap.val() || 0;
+      });
+
+      if(!sessionStorage.getItem("viewed_"+id)){
+        db.ref('posts/'+id+'/views').transaction(v => (v||0)+1);
+        sessionStorage.setItem("viewed_"+id,true);
       }
+
+      // ✅ Reactions Listener
+      ['like','thumb','dislike'].forEach(type=>{
+        db.ref(`posts/${id}/reactions/${type}`).on('value',snap=>{
+          card.querySelector(`.pdsu-reaction[data-type="${type}"] .count`).textContent = snap.val() || 0;
+        });
+      });
+
+      // ✅ Restore previous user reactions
+      let active = JSON.parse(localStorage.getItem(`pdsu_react_${id}_${deviceID}`) || "[]");
+      active.forEach(type=>{
+        let btn = card.querySelector(`.pdsu-reaction[data-type="${type}"]`);
+        if(btn) btn.classList.add('pdsu-active');
+      });
     });
-  });
 
-  // ? Share modal
-  function openShare(){document.getElementById('shareModal').style.display='flex';}
-  document.getElementById('shareModal').addEventListener('click',e=>{
-    if(e.target.id==='shareModal') e.target.style.display='none';
-  });
+    // ✅ Reaction Click
+    document.querySelectorAll('.pdsu-reaction').forEach(btn=>{
+      if(btn.classList.contains('share-icon')) return;
 
-  function copyLink(){
-    navigator.clipboard.writeText(pageURL);
-    alert("Link Copied!");
-  }
+      btn.addEventListener('click',()=>{
+        let card = btn.closest('.pdsu-card');
+        let postId = card.dataset.postId;
+        let type = btn.dataset.type;
+        let key = `pdsu_react_${postId}_${deviceID}`;
+        let active = JSON.parse(localStorage.getItem(key) || "[]");
 
-  function shareTo(platform){
-    let encoded = encodeURIComponent(pageURL);
-    if(platform==='whatsapp'){
-      window.location.href = `whatsapp://send?text=${encoded}`;
-      setTimeout(()=>{window.open(`https://wa.me/?text=${encoded}`,'_blank');},1500);
-    } else if(platform==='instagram'){
-      window.location.href = `instagram://share?text=${encoded}`;
-      setTimeout(()=>{window.open(`https://www.instagram.com/?url=${encoded}`,'_blank');},1500);
-    } else if(platform==='telegram'){
-      window.location.href = `tg://msg_url?url=${encoded}`;
-      setTimeout(()=>{window.open(`https://t.me/share/url?url=${encoded}`,'_blank');},1500);
+        if(btn.classList.contains('pdsu-active')){
+          btn.classList.remove('pdsu-active');
+          db.ref(`posts/${postId}/reactions/${type}`).transaction(v => Math.max(0,(v||0)-1));
+          active = active.filter(x=>x!==type);
+        } else {
+          if(active.length >= 2){
+            let oldType = active[0];
+            let oldBtn = card.querySelector(`.pdsu-reaction[data-type="${oldType}"]`);
+            if(oldBtn) oldBtn.classList.remove('pdsu-active');
+            db.ref(`posts/${postId}/reactions/${oldType}`).transaction(v => Math.max(0,(v||0)-1));
+            active.shift();
+          }
+          btn.classList.add('pdsu-active');
+          db.ref(`posts/${postId}/reactions/${type}`).transaction(v => (v||0)+1);
+          active.push(type);
+        }
+        localStorage.setItem(key, JSON.stringify(active));
+      });
+    });
+
+    // ✅ Share Modal
+    function openShare(){document.getElementById('shareModal').style.display='flex';}
+    document.getElementById('shareModal').addEventListener('click',e=>{
+      if(e.target.id==='shareModal') e.target.style.display='none';
+    });
+    function copyLink(){navigator.clipboard.writeText(pageURL); alert("Link Copied!");}
+    function shareTo(platform){
+      let encoded = encodeURIComponent(pageURL);
+      if(platform==='whatsapp'){window.open(`https://wa.me/?text=${encoded}`,'_blank');}
+      else if(platform==='instagram'){window.open(`https://www.instagram.com/?url=${encoded}`,'_blank');}
+      else if(platform==='telegram'){window.open(`https://t.me/share/url?url=${encoded}`,'_blank');}
     }
+
+   // ✅ University news slider
+ const uniSlider = document.getElementById('uni-slider');
+  const uniCards = document.querySelectorAll('.uni-card');
+  const uniDotsContainer = document.getElementById('uni-dots');
+  let uniIndex = 0;
+  const uniVisibleCards = 3; 
+  const uniTotal = uniCards.length;
+
+  function uniUpdateSlider(){
+    const cardWidth = uniCards[0].offsetWidth + 24;
+    uniSlider.style.transform = `translateX(-${uniIndex * cardWidth}px)`;
+    document.querySelectorAll('.uni-dots span').forEach((dot,i)=>{
+      dot.classList.toggle('active', i===uniIndex);
+    });
   }
 
+  function uniNextSlide(){
+    if(uniIndex < uniTotal - uniVisibleCards){
+      uniIndex++;
+    } else {
+      uniIndex = 0;
+    }
+    uniUpdateSlider();
+  }
+
+  function uniPrevSlide(){
+    if(uniIndex > 0){
+      uniIndex--;
+    } else {
+      uniIndex = uniTotal - uniVisibleCards;
+    }
+    uniUpdateSlider();
+  }
+
+  setInterval(uniNextSlide, 6000);
+
+  for(let i=0; i<=uniTotal-uniVisibleCards; i++){
+    const dash=document.createElement('span');
+    dash.style.cursor='pointer';
+    dash.onclick=()=>{uniIndex=i; uniUpdateSlider();}
+    if(i===0) dash.classList.add('active');
+    uniDotsContainer.appendChild(dash);
+  }
+
+  window.addEventListener('resize', uniUpdateSlider);
+
+ 
 </script>
+
+
  </body>
 </html>

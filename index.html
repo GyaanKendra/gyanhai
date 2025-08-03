@@ -242,10 +242,139 @@
       margin: 0 5px;
     }
 
-/* Student Success */
- 
+/* Student Success form
+    * {margin:0; padding:0; box-sizing:border-box; font-family:'Poppins', sans-serif;}
 
+    body {background:#f0f2f5; min-height:100vh;}
 
+    /* Message Icon */
+    .msgBtn_uni {
+      position:fixed;
+      top:50%; right:20px;
+      transform:translateY(-50%);
+      background:linear-gradient(135deg,#6a11cb,#2575fc);
+      width:60px; height:60px;
+      border-radius:50%;
+      display:flex; align-items:center; justify-content:center;
+      cursor:pointer;
+      box-shadow:0 5px 20px rgba(0,0,0,0.3);
+      transition:transform 0.2s ease;
+      z-index:100000;
+    }
+    .msgBtn_uni:hover { transform:translateY(-50%) scale(1.08); }
+    .msgBtn_uni svg { fill:#fff; width:28px; height:28px; }
+
+    /* Overlay */
+    .overlay_uni {
+      position:fixed; top:0; left:0;
+      width:100%; height:100%;
+      background:rgba(0,0,0,0.55);
+      backdrop-filter:blur(8px);
+      display:none; align-items:center; justify-content:center;
+      z-index:99999;
+      transition:opacity 0.3s ease;
+    }
+
+    /* Form Popup */
+    .formWrap_uni {
+      background:#fff;
+      padding:25px 30px;
+      border-radius:18px;
+      width:340px; max-width:90%;
+      box-shadow:0 8px 30px rgba(0,0,0,0.25);
+      animation:pop_uni 0.3s ease-out;
+      position:relative;
+    }
+
+    @keyframes pop_uni {
+      0% {transform:scale(0.6); opacity:0;}
+      100% {transform:scale(1); opacity:1;}
+    }
+
+    /* Title */
+    .formWrap_uni h2 {
+      text-align:center;
+      margin-bottom:15px;
+      font-size:22px;
+      font-weight:700;
+      background:linear-gradient(135deg,#6a11cb,#2575fc);
+      -webkit-background-clip:text;
+      -webkit-text-fill-color:transparent;
+    }
+
+    /* Inputs */
+    .group_uni {margin-bottom:14px;}
+    .group_uni input, .group_uni textarea {
+      width:100%;
+      padding:10px;
+      border-radius:10px;
+      border:1px solid #ccc;
+      outline:none;
+      font-size:14px;
+      transition:0.3s;
+    }
+    .group_uni input:focus, .group_uni textarea:focus {
+      border-color:#6a11cb;
+      box-shadow:0 0 6px rgba(106,17,203,0.3);
+    }
+    .group_uni textarea {
+      resize:none;
+      height:80px;
+    }
+
+    /* Word Counter */
+    .count_uni {
+      font-size:12px;
+      color:#666;
+      text-align:right;
+      margin-top:3px;
+    }
+
+    /* Submit Button */
+    .btn_uni {
+      width:100%;
+      background:linear-gradient(135deg,#6a11cb,#2575fc);
+      border:none;
+      padding:12px;
+      border-radius:10px;
+      color:#fff;
+      font-size:16px;
+      cursor:pointer;
+      transition:0.3s;
+    }
+    .btn_uni:hover {opacity:0.9;}
+
+    /* Success Box */
+    .successBox_uni {
+      display:none;
+      text-align:center;
+      padding:20px;
+    }
+    .icon_uni {
+      width:60px; height:60px;
+      background:linear-gradient(135deg,#00c853,#b2ff59);
+      border-radius:50%;
+      margin:0 auto 15px auto;
+      display:flex; align-items:center; justify-content:center;
+      box-shadow:0 5px 15px rgba(0,0,0,0.2);
+    }
+    .icon_uni svg {width:28px; height:28px; fill:#fff;}
+    .successBox_uni h3 {color:#333; font-size:18px; font-weight:600;}
+
+    /* Close Button */
+    .closeBtn_uni {
+      position:absolute;
+      top:8px; right:10px;
+      background:transparent;
+      border:none;
+      font-size:22px;
+      cursor:pointer;
+      color:#666;
+    }
+    .closeBtn_uni:hover {color:#000;}
+
+  
+  
 /* articles */
 .articles {
   background: #f9fafb;
@@ -1034,6 +1163,53 @@
     </div>
   </div>
   
+   
+   
+    <!-- Floating Message Icon -->
+  <div class="msgBtn_uni" id="open_uni">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+      <path d="M256 32C114.6 32 0 125.1 0 240c0 49.5 23.5 94.8 62.9 129.3c-2.3 35.5-14.3 69.3-34.4 98.3c-6.8 9.9 3.2 22.8 14.7 19.1C99.3 470.4 136.1 454 170.2 429.7C196.4 437.4 225.4 448 256 448c141.4 0 256-93.1 256-208S397.4 32 256 32z"/>
+    </svg>
+  </div>
+
+  <!-- Overlay -->
+  <div class="overlay_uni" id="overlay_uni">
+    <div class="formWrap_uni" id="popup_uni">
+      <button class="closeBtn_uni" id="close_uni">&times;</button>
+      <h2>Share your University Opinion</h2>
+      <form id="form_uni" name="submit-to-google-sheet">
+        <div class="group_uni">
+          <input type="text" name="Full Name" placeholder="Full Name *" required>
+        </div>
+        <div class="group_uni">
+          <input type="text" name="Instagram" placeholder="Instagram ID">
+        </div>
+        <div class="group_uni">
+          <input type="tel" name="Mobile" placeholder="Mobile Number">
+        </div>
+        <div class="group_uni">
+          <input type="email" name="Email" placeholder="Email ID *" required>
+        </div>
+        <div class="group_uni">
+          <textarea name="Opinion" id="msgBox_uni" placeholder="Write your opinion (min 30 characters)" required></textarea>
+          <div class="count_uni" id="count_uni">0 / 30</div>
+        </div>
+        <button type="submit" class="btn_uni">Submit</button>
+      </form>
+
+      <!-- Success Box -->
+      <div class="successBox_uni" id="success_uni">
+        <div class="icon_uni">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+            <path d="M173.9 439.4L7 272.5C-2.3 263.2-2.3 248.8 7 239.5l28.3-28.3c9.4-9.4 24.6-9.4 33.9 0L192 334.1 443.8 82.3c9.4-9.4 24.6-9.4 33.9 0l28.3 28.3c9.4 9.4 9.4 24.6 0 33.9L225.8 439.4c-9.4 9.4-24.6 9.4-33.9 0z"/>
+          </svg>
+        </div>
+        <h3>Submitted Successfully!</h3>
+      </div>
+    </div>
+  </div>
+   
+   
   <!-- Article Section -->
   <section class="articles">
    <div class="container">
@@ -1694,10 +1870,53 @@ let pageURL = window.location.href;
 
   window.addEventListener('resize', uniUpdateSlider);
  
+  
+  
+  //share your story icon
+  const openF = document.getElementById('open_uni');
+    const overlay = document.getElementById('overlay_uni');
+    const closeF = document.getElementById('close_uni');
+    const form = document.getElementById('form_uni');
+    const success = document.getElementById('success_uni');
+    const msgBox = document.getElementById('msgBox_uni');
+    const count = document.getElementById('count_uni');
+
+    openF.onclick = () => overlay.style.display = 'flex';
+    closeF.onclick = () => { overlay.style.display = 'none'; resetF(); };
+
+    function resetF(){
+      form.style.display='block';
+      success.style.display='none';
+      form.reset();
+      count.innerText="0 / 30";
+    }
+
+    msgBox.addEventListener('input', () => {
+      const len = msgBox.value.trim().length;
+      count.innerText = len + " / 30";
+      msgBox.style.borderColor = len < 30 ? "red" : "#6a11cb";
+    });
+
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbz2t5H15BhKrC0nHVwz02DZKJ8TPFJEQP3Dv7WpS6TCBrdwRqUncOs-lrcDRxRGlPrw/exec'; // <-- Google Script URL डालें
+
+    form.addEventListener('submit', e => {
+      e.preventDefault();
+      if(msgBox.value.trim().length < 30){
+        alert("Please write at least 30 characters in the opinion.");
+        return;
+      }
+      const fd = new FormData(form);
+      fetch(scriptURL, { method: 'POST', body: fd })
+      .then(response => {
+        form.style.display='none';
+        success.style.display='block';
+        setTimeout(()=>{ overlay.style.display='none'; resetF(); }, 2000);
+      })
+      .catch(error => alert('Error!', error.message));
+    });
 </script>
 
 
  </body>
 </html>
-
 

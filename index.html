@@ -920,37 +920,37 @@
     }
 
   /* ✅ Book Selling Premium Slider Section */
-     #gk-premium-book-slider {
+  #gkpbs-premium-book-slider {
   background: #f4f7fe;
   padding: 60px 20px;
   font-family: 'Segoe UI', sans-serif;
 }
 
-.gk-book-container {
+.gkpbs-book-container {
   max-width: 1200px;
   margin: auto;
   text-align: center;
 }
 
-.gk-book-section-title {
+.gkpbs-book-section-title {
   font-size: 32px;
   font-weight: bold;
   color: #2d3748;
   margin-bottom: 40px;
 }
 
-.gk-book-slider-wrapper {
+.gkpbs-book-slider-wrapper {
   position: relative;
   overflow: hidden;
 }
 
-.gk-book-slider {
+.gkpbs-book-slider {
   display: flex;
   transition: transform 0.5s ease-in-out;
   will-change: transform;
 }
 
-.gk-book-slide {
+.gkpbs-book-slide {
   flex: 0 0 100%;
   max-width: 100%;
   padding: 20px;
@@ -960,13 +960,13 @@
 }
 
 @media (min-width: 768px) {
-  .gk-book-slide {
+  .gkpbs-book-slide {
     flex: 0 0 33.3333%;
     max-width: 33.3333%;
   }
 }
 
-.gk-book-slide img {
+.gkpbs-book-slide img {
   width: 200px;
   height: 280px;
   object-fit: cover;
@@ -975,24 +975,24 @@
   transition: transform 0.3s;
 }
 
-.gk-book-slide:hover img {
+.gkpbs-book-slide:hover img {
   transform: scale(1.08);
 }
 
-.gk-book-slide h3 {
+.gkpbs-book-slide h3 {
   font-size: 18px;
   margin: 12px 0 8px;
   color: #1a202c;
 }
 
-.gk-price {
+.gkpbs-price {
   font-size: 17px;
   margin-bottom: 10px;
   color: #2e7d32;
   font-weight: bold;
 }
 
-.gk-discount {
+.gkpbs-discount {
   text-decoration: line-through;
   color: #999;
   margin-right: 8px;
@@ -1000,7 +1000,7 @@
   font-size: 15px;
 }
 
-.gk-buy-btn {
+.gkpbs-buy-btn {
   display: inline-block;
   background: linear-gradient(to right, #007bff, #0056b3);
   color: white;
@@ -1011,11 +1011,11 @@
   transition: background 0.3s ease;
 }
 
-.gk-buy-btn:hover {
+.gkpbs-buy-btn:hover {
   background: linear-gradient(to right, #0056b3, #003d80);
 }
 
-.gk-slide-btn {
+.gkpbs-slide-btn {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
@@ -1030,15 +1030,15 @@
   transition: background 0.3s ease;
 }
 
-.gk-slide-btn:hover {
+.gkpbs-slide-btn:hover {
   background: rgba(0,0,0,0.8);
 }
 
-.gk-slide-btn:first-of-type {
+.gkpbs-slide-btn:first-of-type {
   left: 10px;
 }
 
-.gk-slide-btn:last-of-type {
+.gkpbs-slide-btn:last-of-type {
   right: 10px;
 }
 </style>
@@ -1458,51 +1458,51 @@
   </div>
 </div>
 <!-- Book Selling Premium Slider Section -->
-<section id="gk-premium-book-slider">
-  <div class="gk-book-container">
-    <h2 class="gk-book-section-title">📚 Premium Books For You</h2>
-    <div class="gk-book-slider-wrapper">
-      <button class="gk-slide-btn" onclick="prevSlide()">&#10094;</button>
-      <div class="gk-book-slider" id="bookSlider">
+<section id="gkpbs-premium-book-slider">
+  <div class="gkpbs-book-container">
+    <h2 class="gkpbs-book-section-title">📚 Premium Books For You</h2>
+    <div class="gkpbs-book-slider-wrapper">
+      <button class="gkpbs-slide-btn" onclick="gkpbsPrevSlide()">&#10094;</button>
+      <div class="gkpbs-book-slider" id="gkpbsBookSlider">
 
-        <!-- Book Slides (5) -->
-        <div class="gk-book-slide">
+        <!-- Book Slides -->
+        <div class="gkpbs-book-slide">
           <img src="https://images.unsplash.com/photo-1512820790803-83ca734da794" alt="Book 1">
           <h3>Mastering Quantitative Aptitude</h3>
-          <p class="gk-price"><span class="gk-discount">₹699</span> ₹499</p>
-          <a href="#" class="gk-buy-btn">Buy Now</a>
+          <p class="gkpbs-price"><span class="gkpbs-discount">₹699</span> ₹499</p>
+          <a href="#" class="gkpbs-buy-btn">Buy Now</a>
         </div>
 
-        <div class="gk-book-slide">
+        <div class="gkpbs-book-slide">
           <img src="https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c" alt="Book 2">
           <h3>General Knowledge 2025</h3>
-          <p class="gk-price"><span class="gk-discount">₹499</span> ₹349</p>
-          <a href="#" class="gk-buy-btn">Buy Now</a>
+          <p class="gkpbs-price"><span class="gkpbs-discount">₹499</span> ₹349</p>
+          <a href="#" class="gkpbs-buy-btn">Buy Now</a>
         </div>
 
-        <div class="gk-book-slide">
+        <div class="gkpbs-book-slide">
           <img src="https://images.unsplash.com/photo-1524995997946-a1c2e315a42f" alt="Book 3">
           <h3>Hindi Grammar Mastery</h3>
-          <p class="gk-price"><span class="gk-discount">₹399</span> ₹299</p>
-          <a href="#" class="gk-buy-btn">Buy Now</a>
+          <p class="gkpbs-price"><span class="gkpbs-discount">₹399</span> ₹299</p>
+          <a href="#" class="gkpbs-buy-btn">Buy Now</a>
         </div>
 
-        <div class="gk-book-slide">
+        <div class="gkpbs-book-slide">
           <img src="https://images.unsplash.com/photo-1553729459-efe14ef6055d" alt="Book 4">
           <h3>Logical Reasoning Pro</h3>
-          <p class="gk-price"><span class="gk-discount">₹599</span> ₹449</p>
-          <a href="#" class="gk-buy-btn">Buy Now</a>
+          <p class="gkpbs-price"><span class="gkpbs-discount">₹599</span> ₹449</p>
+          <a href="#" class="gkpbs-buy-btn">Buy Now</a>
         </div>
 
-        <div class="gk-book-slide">
+        <div class="gkpbs-book-slide">
           <img src="https://images.unsplash.com/photo-1581093588401-25e0c16dd7f3" alt="Book 5">
           <h3>Current Affairs Monthly</h3>
-          <p class="gk-price"><span class="gk-discount">₹299</span> ₹199</p>
-          <a href="#" class="gk-buy-btn">Buy Now</a>
+          <p class="gkpbs-price"><span class="gkpbs-discount">₹299</span> ₹199</p>
+          <a href="#" class="gkpbs-buy-btn">Buy Now</a>
         </div>
 
       </div>
-      <button class="gk-slide-btn" onclick="nextSlide()">&#10095;</button>
+      <button class="gkpbs-slide-btn" onclick="gkpbsNextSlide()">&#10095;</button>
     </div>
   </div>
 </section>
@@ -2040,31 +2040,31 @@ let pageURL = window.location.href;
  
 
 //Book Selling Premium Slider Section
- let currentIndex = 0;
-const slider = document.getElementById('bookSlider');
-const slides = document.querySelectorAll('.gk-book-slide');
-const visibleSlides = window.innerWidth >= 768 ? 3 : 1;
-const totalSlides = slides.length;
+ let gkpbsCurrentIndex = 0;
+const gkpbsSlider = document.getElementById('gkpbsBookSlider');
+const gkpbsSlides = document.querySelectorAll('.gkpbs-book-slide');
+const gkpbsVisibleSlides = window.innerWidth >= 768 ? 3 : 1;
+const gkpbsTotalSlides = gkpbsSlides.length;
 
-function showSlide(index) {
-  const maxIndex = totalSlides - visibleSlides;
-  currentIndex = (index < 0) ? maxIndex : (index > maxIndex ? 0 : index);
-  slider.style.transform = `translateX(-${currentIndex * (100 / visibleSlides)}%)`;
+function gkpbsShowSlide(index) {
+  const maxIndex = gkpbsTotalSlides - gkpbsVisibleSlides;
+  gkpbsCurrentIndex = (index < 0) ? maxIndex : (index > maxIndex ? 0 : index);
+  gkpbsSlider.style.transform = `translateX(-${gkpbsCurrentIndex * (100 / gkpbsVisibleSlides)}%)`;
 }
 
-function autoSlide() {
-  showSlide(currentIndex + 1);
+function gkpbsAutoSlide() {
+  gkpbsShowSlide(gkpbsCurrentIndex + 1);
 }
 
-function prevSlide() {
-  showSlide(currentIndex - 1);
+function gkpbsPrevSlide() {
+  gkpbsShowSlide(gkpbsCurrentIndex - 1);
 }
 
-function nextSlide() {
-  showSlide(currentIndex + 1);
+function gkpbsNextSlide() {
+  gkpbsShowSlide(gkpbsCurrentIndex + 1);
 }
 
-setInterval(autoSlide, 5000);
+setInterval(gkpbsAutoSlide, 5000);
  
   
   //share your story icon
@@ -2114,6 +2114,7 @@ setInterval(autoSlide, 5000);
 
  </body>
 </html>
+
 
 
 

@@ -323,38 +323,36 @@
     }
 
     // Typewriter effect
-    const typewriterPhrases = [
-      "Explore Courses",
-      "Find Scholarships",
-      "Join Our Community",
-      "Stay Updated"
-    ];
-    let typeIndex = 0, charIndex = 0, typing = true;
-    const typewriterElement = document.getElementById('typewriter');
+    const words = ["Shekhawati University", "Rajasthan University", "Matsya University", "Admit Card", "Result", "Admission Form"];
+let wordIndex = 0;
+let charIndex = 0;
+const typewriter = document.getElementById('typewriter');
 
-    function typeWriter() {
-      if (typing) {
-        if (charIndex < typewriterPhrases[typeIndex].length) {
-          typewriterElement.textContent += typewriterPhrases[typeIndex][charIndex];
-          charIndex++;
-          setTimeout(typeWriter, 120);
-        } else {
-          typing = false;
-          setTimeout(typeWriter, 2000);
-        }
-      } else {
-        if (charIndex > 0) {
-          typewriterElement.textContent = typewriterElement.textContent.slice(0, -1);
-          charIndex--;
-          setTimeout(typeWriter, 60);
-        } else {
-          typing = true;
-          typeIndex = (typeIndex + 1) % typewriterPhrases.length;
-          setTimeout(typeWriter, 500);
-        }
-      }
-    }
-    typeWriter();
+function type() {
+  if (!typewriter) return; // Safety check
+
+  if (charIndex < words[wordIndex].length) {
+    typewriter.textContent += words[wordIndex].charAt(charIndex);
+    charIndex++;
+    setTimeout(type, 100);
+  } else {
+    setTimeout(erase, 1500);
+  }
+}
+
+function erase() {
+  if (charIndex > 0) {
+    typewriter.textContent = words[wordIndex].substring(0, charIndex - 1);
+    charIndex--;
+    setTimeout(erase, 50);
+  } else {
+    wordIndex = (wordIndex + 1) % words.length;
+    setTimeout(type, 300);
+  }
+}
+
+document.addEventListener("DOMContentLoaded", type);
+
 
     // Google Sheets form submission with validation
      const form = document.getElementById('contact-form');
@@ -397,4 +395,5 @@
 
 </body>
 </html>
+
 
